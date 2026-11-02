@@ -32,6 +32,11 @@ src/importTalk.mjs    adopt a talk/agents character as a Forge pack
 src/qa.mjs            the QA gate (talk + motion layers)
 src/exporters.mjs     talk/agents flat files + characters.json; motion layout
 src/pack.mjs          .rigpop-pack bundle with sha256 index
+src/pngcodec.mjs      pure-JS PNG decode/encode (stdlib zlib) — v0.2
+src/imageops.mjs      chroma key, connected components, reading order, crop
+src/cut.mjs           sheets -> parts, via sheets/sheets.json labels
+src/autorig.mjs       silhouette anchor estimates -> motion rig.json
+src/facepack.mjs      states diff -> talk patches + rects
 examples/             real, QA-passing packs — keep them passing
 test/                 node --test suites; run before every push
 ```

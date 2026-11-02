@@ -2,7 +2,11 @@
 
 ![rigpop-forge — one drawing in, a character pack out](docs/assets/hero.png)
 
-![Node >= 20](https://img.shields.io/badge/node-%3E%3D20-339933) ![spec v1](https://img.shields.io/badge/character%20spec-v1-FF4D8D) ![tests](https://img.shields.io/badge/tests-6%20passing-00A676) ![zero dependencies](https://img.shields.io/badge/dependencies-0-FFD23F) ![MIT](https://img.shields.io/badge/license-MIT-blue)
+![Node >= 20](https://img.shields.io/badge/node-%3E%3D20-339933) ![spec v1](https://img.shields.io/badge/character%20spec-v1-FF4D8D) ![tests](https://img.shields.io/badge/tests-12%20passing-00A676) ![zero dependencies](https://img.shields.io/badge/dependencies-0-FFD23F) ![MIT](https://img.shields.io/badge/license-MIT-blue)
+
+**v0.2 is here:** sheets now cut themselves (`cut`) and talk patches derive
+themselves (`facepack`) — see below. Still zero dependencies: the PNG codec
+is pure JS on Node's zlib.
 
 **The character factory for the Rigpop family.** Engines were never the
 problem — talking busts, agent-rendered videos, full cartoons, ink restyles,
@@ -47,9 +51,10 @@ failure. Forge makes it a loud one.
 node bin/rigpop-forge.js init aarav-2 --out characters/aarav-2 --voice hi-IN-MadhurNeural
 
 # paint the art: prompts/00-model-sheet.md first — it is the reference for
-# every other sheet. Drop the talk pack into talk/, measure the mouth and
-# blink rects into character.rigpop.json, then:
+# every other sheet. Then let Forge do the measuring:
 
+node bin/rigpop-forge.js cut characters/aarav-2        # sheets -> parts + motion/rig.json
+node bin/rigpop-forge.js facepack characters/aarav-2   # states -> talk patches + rects
 node bin/rigpop-forge.js qa characters/aarav-2
 node bin/rigpop-forge.js export talk characters/aarav-2 ../rigpop-talk/characters
 node bin/rigpop-forge.js export motion characters/aarav-2 ../rigpop-motion
@@ -75,6 +80,8 @@ node bin/rigpop-forge.js import-talk ../rigpop-talk/characters kdswapnil \
 | `export talk\|agents <pack> <out>` | Flat `<id>_*.png` files + merged `characters.json`, exactly where the app expects them |
 | `export motion <pack> <out>` | `characters/<id>/` with `rig.json`, pose packs, and a script cast snippet |
 | `pack <pack> --out <dir>` | Bundle `<id>.rigpop-pack/` with a sha256 content index (diffable, cacheable) |
+| `cut <pack>` | **v0.2** — chroma-key the `sheets/` sheets, cut components in reading order into `parts/`, estimate anchors, write `motion/rig.json` |
+| `facepack <pack>` | **v0.2** — diff `states/{A,O,E,blink}.png` against the base and derive the talk patches + rects automatically |
 
 ## The sheet prompts
 
@@ -96,15 +103,30 @@ writes them down and generates them for you.
 | [rigpop-ink](https://github.com/swapagrawal14/rigpop-ink) | Footage that redraws itself as ink |
 | wowkit | Websites with living Rigpop characters |
 
+## What's new in v0.2
+
+- **`cut`** — the auto-cut + auto-rig port: chroma keying by greenness,
+  connected components, speck removal, reading-order label matching
+  (including `eyes.open*2` pair parts), tight crops, and a rigpop-motion
+  `rig.json` with silhouette-estimated anchors (face ellipse, torso
+  neck/shoulders/hip, limb ends, eye/mouth centres, sampled skin/hair).
+- **`facepack`** — draw the base once, then draw it again with only the
+  mouth (or eyes) changed, per state. Forge diffs, crops and writes the
+  patch + rect. On the real Doodle Swapnil art it re-derived a 66×78 rect
+  nested inside the original hand-measured 79×79 patch — the tight mouth
+  region plus margin, exactly as intended. Drifted state drawings (whole
+  canvas changed) are rejected.
+- **A pure-JS PNG codec** (`src/pngcodec.mjs`) — decode (grey/RGB/palette/
+  alpha, 8/16-bit) + encode on Node's zlib, so Forge keeps zero deps.
+
 ## Roadmap
 
-- **v0.2 — auto-cut + autorig port:** chroma keying, connected components and
-  pivot-finding from rigpop-motion's `src/v3`, so sheets become parts without
-  leaving Forge.
-- **v0.2 — face-patch maker:** derive blink/mouth patches + rects from the
-  face kit automatically (today rects are measured in rigpop-talk).
 - **v0.3 — wowkit export:** project JSON with joints, from motion anchors.
+- **v0.3 — pose-pack face patches:** port rigpop-motion's facepatch so pose
+  packs keep blinking and lip-syncing.
 - **v0.3 — registry:** publish/discover `.rigpop-pack` characters.
+- **Later — rig refinement:** sleeves painted into torsos, rubber-hose limb
+  strips (the v3 motion tricks), and anchor hand-tuning UI.
 
 ## Tests & visuals
 

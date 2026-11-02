@@ -70,6 +70,35 @@ unchanged as the core every pack must have:
 - **wowkit** — planned (v2): the Rigpop web player takes a project JSON with
   joints; Forge will emit it from the motion layer's anchors.
 
+## Sheets and cutting (v0.2)
+
+`sheets/sheets.json` declares the painted sheets and what is on them, in
+reading order:
+
+```json
+{ "sheets": [
+  { "file": "sheets/head.png", "labels": ["head.front", "head.34", "accessory"] },
+  { "file": "sheets/face.png", "labels": ["eyes.open*2", "mouth.A", "..."] }
+] }
+```
+
+A label may carry `*N` when one part is drawn as N separate components (an
+eye pair). `rigpop-forge cut` chroma-keys each sheet (green ground, keyed by
+greenness so soft ground shadows go too), drops specks, reads components in
+reading order, and writes `parts/<label>.png` plus a `motion/rig.json` whose
+anchors are **estimates** from the silhouettes (face ellipse, torso
+neck/shoulders/hip, limb end points, eye/mouth centres, sampled skin/hair).
+Component count must equal label count — a mismatch is an error telling you
+the sheet or the labels need fixing.
+
+## Talk states and facepack (v0.2)
+
+`states/{A,O,E,blink}.png` are full-canvas drawings identical to the base
+except the one feature that changes. `rigpop-forge facepack` diffs each
+state against the base, crops the changed region (plus a margin), and writes
+`talk/<kind>.png` + its rect. A state differing over more than 45% of the
+canvas is rejected as drifted. This replaces hand-measuring patch rects.
+
 ## Versioning
 
 `spec: 1`. Breaking changes bump the integer; exporters refuse nothing —

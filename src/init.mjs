@@ -7,8 +7,15 @@ import { sheetPrompts } from './prompts.mjs';
 export function initCharacter(outDir, opts) {
   if (existsSync(join(outDir, 'character.rigpop.json')))
     throw new Error(`${outDir} already has a character.rigpop.json — refusing to overwrite`);
-  for (const sub of ['talk', 'sheets', 'parts', 'poses', 'prompts'])
+  for (const sub of ['talk', 'sheets', 'states', 'parts', 'poses', 'prompts'])
     mkdirSync(join(outDir, sub), { recursive: true });
+  writeFileSync(join(outDir, 'sheets', 'sheets.json'), JSON.stringify({
+    sheets: [
+      { file: 'sheets/head.png', labels: ['head.front', 'head.34', 'accessory'] },
+      { file: 'sheets/body.png', labels: ['torso', 'arm.upper', 'arm.fore', 'hand.open', 'hand.fist', 'hand.point', 'leg.thigh', 'leg.shin', 'foot'] },
+      { file: 'sheets/face.png', labels: ['eyes.open*2', 'eyes.half*2', 'eyes.closed*2', 'eyes.happy*2', 'mouth.A', 'mouth.E', 'mouth.O', 'mouth.M', 'mouth.smile', 'mouth.laugh', 'mouth.frown', 'mouth.smirk'] },
+    ],
+  }, null, 2) + '\n');
 
   const manifest = {
     spec: 1,
@@ -41,6 +48,6 @@ export function initCharacter(outDir, opts) {
   for (const [file, text] of Object.entries(prompts))
     writeFileSync(join(outDir, 'prompts', file), text);
   writeFileSync(join(outDir, 'README.md'),
-    `# ${manifest.name}\n\nA rigpop-forge character pack. Generate the art with \`prompts/\`, drop the talk pack into \`talk/\`,\nmeasure the patch rects into \`character.rigpop.json\`, then run:\n\n\`\`\`\nrigpop-forge qa .\nrigpop-forge export talk ../rigpop-talk/characters\n\`\`\`\n`);
+    `# ${manifest.name}\n\nA rigpop-forge character pack. Generate the art with \`prompts/\`:\n\n- Sheets (head/body/face) go in \`sheets/\` with \`sheets/sheets.json\` — \`rigpop-forge cut .\` turns them into \`parts/\` + \`motion/rig.json\`.\n- Talk states go in \`states/\` (the base drawing with only the mouth/eyes changed) — \`rigpop-forge facepack .\` derives the patches + rects.\n- The talk base + poses go in \`talk/\`.\n\nThen:\n\n\`\`\`\nrigpop-forge qa .\nrigpop-forge export talk ../rigpop-talk/characters\n\`\`\`\n`);
   return manifest;
 }

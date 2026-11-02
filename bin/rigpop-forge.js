@@ -11,6 +11,8 @@ import { qaCharacter } from '../src/qa.mjs';
 import { importTalk } from '../src/importTalk.mjs';
 import { exportMotion, exportTalkFamily } from '../src/exporters.mjs';
 import { packCharacter } from '../src/pack.mjs';
+import { cutSheets } from '../src/cut.mjs';
+import { makeFacePatches } from '../src/facepack.mjs';
 
 const HELP = `rigpop-forge — one drawing in, a character pack out
 
@@ -28,6 +30,12 @@ const HELP = `rigpop-forge — one drawing in, a character pack out
       Write characters/<id>/ (rig.json, pose packs, cast snippet).
   pack <packDir> --out <dir>
       Bundle into <id>.rigpop-pack/ with a sha256 content index.
+  cut <packDir>
+      Sheets -> parts: chroma-key sheets/sheets.json sheets, cut components
+      in reading order, write parts/*.png + an estimated motion/rig.json.
+  facepack <packDir> [--margin 6]
+      Derive talk patches + rects by diffing states/{A,O,E,blink}.png
+      (full-canvas variants) against the base drawing.
 `;
 
 function args(argv) {
@@ -95,6 +103,20 @@ try {
     const m = q.manifest;
     const r = app === 'motion' ? exportMotion(m, dir, resolve(outDir)) : exportTalkFamily(m, dir, resolve(outDir), app);
     console.log(`✓ exported ${m.id} for rigpop-${r.app}: ${r.written.join(', ')}`);
+  }
+
+  else if (cmd === 'cut') {
+    const dir = resolve(pos[0] || '.');
+    const { report } = cutSheets(dir);
+    for (const line of report) console.log(`  ${line}`);
+    console.log(`✓ cut ${dir} — now run: rigpop-forge qa ${pos[0] || '.'}`);
+  }
+
+  else if (cmd === 'facepack') {
+    const dir = resolve(pos[0] || '.');
+    const { report } = makeFacePatches(dir, { margin: flags.margin ? +flags.margin : 6 });
+    for (const line of report) console.log(`  ${line}`);
+    console.log(`✓ face patches derived for ${dir} — manifest rects updated, run qa to verify`);
   }
 
   else if (cmd === 'pack') {
