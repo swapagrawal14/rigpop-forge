@@ -13,6 +13,9 @@ import { exportMotion, exportTalkFamily } from '../src/exporters.mjs';
 import { packCharacter } from '../src/pack.mjs';
 import { cutSheets } from '../src/cut.mjs';
 import { makeFacePatches } from '../src/facepack.mjs';
+import { exportWowkit } from '../src/wowkit.mjs';
+import { buildFacepacks } from '../src/facepacks.mjs';
+import { buildRegistry, publish } from '../src/registry.mjs';
 
 const HELP = `rigpop-forge — one drawing in, a character pack out
 
@@ -36,6 +39,15 @@ const HELP = `rigpop-forge — one drawing in, a character pack out
   facepack <packDir> [--margin 6]
       Derive talk patches + rects by diffing states/{A,O,E,blink}.png
       (full-canvas variants) against the base drawing.
+  export wowkit <packDir> <wowkitRepoDir>
+      Write a WowKit v2 project (cutout image + estimated joints + sway).
+  facepacks <packDir> [--face x,y,w,h] [--force]
+      Pose-pack face patches: per key, blink + mouth tiles filled with the
+      skin sampled on that key, indexed in the pack's pack.json.
+  publish <packDir> --registry <dir>
+      QA-pack the character into a registry and rebuild its catalog.
+  registry build <dir>
+      Rebuild registry.json + the static gallery in a registry folder.
 `;
 
 function args(argv) {
@@ -96,12 +108,14 @@ try {
 
   else if (cmd === 'export') {
     const [app, packDir, outDir] = pos;
-    if (!app || !packDir || !outDir) fail('export needs <talk|agents|motion> <packDir> <outDir>');
+    if (!app || !packDir || !outDir) fail('export needs <talk|agents|motion|wowkit> <packDir> <outDir>');
     const dir = resolve(packDir);
     const q = qaCharacter(dir);
     if (!q.ok) fail(`pack does not pass qa — refusing to export a broken character (${q.errors[0]})`);
     const m = q.manifest;
-    const r = app === 'motion' ? exportMotion(m, dir, resolve(outDir)) : exportTalkFamily(m, dir, resolve(outDir), app);
+    const r = app === 'motion' ? exportMotion(m, dir, resolve(outDir))
+      : app === 'wowkit' ? exportWowkit(m, dir, resolve(outDir))
+      : exportTalkFamily(m, dir, resolve(outDir), app);
     console.log(`✓ exported ${m.id} for rigpop-${r.app}: ${r.written.join(', ')}`);
   }
 
@@ -117,6 +131,34 @@ try {
     const { report } = makeFacePatches(dir, { margin: flags.margin ? +flags.margin : 6 });
     for (const line of report) console.log(`  ${line}`);
     console.log(`✓ face patches derived for ${dir} — manifest rects updated, run qa to verify`);
+  }
+
+  else if (cmd === 'facepacks') {
+    const dir = resolve(pos[0] || '.');
+    let faceOverride = null;
+    if (flags.face) {
+      const [x, y, w, h] = String(flags.face).split(',').map(Number);
+      if ([x, y, w, h].some(Number.isNaN)) fail('--face needs x,y,w,h numbers');
+      faceOverride = { x, y, w, h };
+    }
+    const { report } = buildFacepacks(dir, { faceOverride, force: !!flags.force });
+    for (const line of report) console.log(`  ${line}`);
+    console.log(`✓ pose-pack face patches built for ${dir}`);
+  }
+
+  else if (cmd === 'publish') {
+    const dir = resolve(pos[0] || '.');
+    if (!flags.registry) fail('publish needs --registry <dir>');
+    const q = qaCharacter(dir);
+    if (!q.ok) fail(`pack does not pass qa — refusing to publish a broken character (${q.errors[0]})`);
+    const { index, entries } = publish(dir, resolve(flags.registry));
+    console.log(`✓ published ${index.id} — registry now holds ${entries.length} pack(s)`);
+  }
+
+  else if (cmd === 'registry') {
+    if (pos[0] !== 'build' || !pos[1]) fail('usage: rigpop-forge registry build <dir>');
+    const entries = buildRegistry(resolve(pos[1]));
+    console.log(`✓ registry rebuilt: ${entries.length} pack(s) — see registry.json + index.html in ${resolve(pos[1])}`);
   }
 
   else if (cmd === 'pack') {

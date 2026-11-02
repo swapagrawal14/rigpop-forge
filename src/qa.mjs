@@ -75,6 +75,18 @@ export function qaCharacter(dir) {
       if (keys.length === 0) errors.push(`pose pack ${pack.name}: no key*.png frames in ${pack.dir || `poses/${pack.name}`}`);
       else if (pack.keys && keys.length !== pack.keys)
         warnings.push(`pose pack ${pack.name}: manifest says ${pack.keys} keys, found ${keys.length}`);
+      const packJson = join(packDir, 'pack.json');
+      if (keys.length && !existsSync(packJson))
+        warnings.push(`pose pack ${pack.name}: no face patches yet — it will not blink or lip-sync while playing (run: rigpop-forge facepacks)`);
+      else if (keys.length && existsSync(packJson)) {
+        try {
+          const idx = JSON.parse(readFileSync(packJson, 'utf8'));
+          for (const k of idx.keys || []) {
+            const all = [k.patches?.blink, ...Object.values(k.patches?.mouth || {})];
+            for (const f of all) if (f && !existsSync(join(packDir, f))) errors.push(`pose pack ${pack.name}: pack.json names missing patch ${f}`);
+          }
+        } catch { warnings.push(`pose pack ${pack.name}: pack.json is not valid JSON`); }
+      }
     }
   }
   return { ok: errors.length === 0, errors, warnings, manifest: m };

@@ -99,6 +99,37 @@ state against the base, crops the changed region (plus a margin), and writes
 `talk/<kind>.png` + its rect. A state differing over more than 45% of the
 canvas is rejected as drifted. This replaces hand-measuring patch rects.
 
+## WowKit export (v0.3)
+
+`export wowkit` writes a WowKit v2 project: the talk base as
+`assets/cast/<id>-cutout.png` and `projects/cast/<id>.json` with the
+15-joint skeleton (hip/spine/head, arms, legs). Joint positions are
+estimates from the pack's face geometry, flagged in the project's `forge`
+note, and the animation is a generated gentle-sway loop (rot in degrees,
+33 keys over 2.4 s, the built-in cast's units).
+
+## Pose-pack face patches (v0.3)
+
+A pose pack (motion layer) may carry per-key face patches so it keeps
+blinking and lip-syncing while it plays:
+
+```
+poses/<action>/key0.png  key0.blink.png  key0.m.rest|M|A|O|E.png  pack.json
+```
+
+`pack.json` records the pack's face rect and the derived eyes/mouth rects
+plus the patch index. `rigpop-forge facepacks` builds the tiles: each is
+filled with the skin colour sampled in a ring around its rect on that key,
+with the pack's cut face-kit part composited on top. A pose pack declares
+its normalised face region once, as `motion.posePacks[].face` `{x,y,w,h}`.
+
+## Registry (v0.3)
+
+A registry is a folder: `packs/<id>.rigpop-pack/`, a `registry.json`
+catalog (`{format: "rigpop-registry", version: 1, packs: [...]}`) and a
+static `index.html` gallery. `publish` QA-packs a character into it;
+`registry build` regenerates the catalog and gallery.
+
 ## Versioning
 
 `spec: 1`. Breaking changes bump the integer; exporters refuse nothing —

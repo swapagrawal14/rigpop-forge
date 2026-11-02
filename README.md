@@ -2,11 +2,10 @@
 
 ![rigpop-forge — one drawing in, a character pack out](docs/assets/hero.png)
 
-![Node >= 20](https://img.shields.io/badge/node-%3E%3D20-339933) ![spec v1](https://img.shields.io/badge/character%20spec-v1-FF4D8D) ![tests](https://img.shields.io/badge/tests-12%20passing-00A676) ![zero dependencies](https://img.shields.io/badge/dependencies-0-FFD23F) ![MIT](https://img.shields.io/badge/license-MIT-blue)
+![Node >= 20](https://img.shields.io/badge/node-%3E%3D20-339933) ![spec v1](https://img.shields.io/badge/character%20spec-v1-FF4D8D) ![tests](https://img.shields.io/badge/tests-16%20passing-00A676) ![zero dependencies](https://img.shields.io/badge/dependencies-0-FFD23F) ![MIT](https://img.shields.io/badge/license-MIT-blue)
 
-**v0.2 is here:** sheets now cut themselves (`cut`) and talk patches derive
-themselves (`facepack`) — see below. Still zero dependencies: the PNG codec
-is pure JS on Node's zlib.
+**v0.3 is here:** characters now travel — WowKit export, pose-pack face
+patches, and a publishable registry. Still zero dependencies.
 
 **The character factory for the Rigpop family.** Engines were never the
 problem — talking busts, agent-rendered videos, full cartoons, ink restyles,
@@ -82,6 +81,10 @@ node bin/rigpop-forge.js import-talk ../rigpop-talk/characters kdswapnil \
 | `pack <pack> --out <dir>` | Bundle `<id>.rigpop-pack/` with a sha256 content index (diffable, cacheable) |
 | `cut <pack>` | **v0.2** — chroma-key the `sheets/` sheets, cut components in reading order into `parts/`, estimate anchors, write `motion/rig.json` |
 | `facepack <pack>` | **v0.2** — diff `states/{A,O,E,blink}.png` against the base and derive the talk patches + rects automatically |
+| `export wowkit <pack> <repo>` | **v0.3** — WowKit v2 project: base cutout + 15 estimated joints + a gentle-sway loop |
+| `facepacks <pack> [--face x,y,w,h]` | **v0.3** — pose-pack blink/mouth tiles, skin-sampled per key, indexed in `pack.json` |
+| `publish <pack> --registry <dir>` | **v0.3** — QA-pack a character into a registry and rebuild its catalog |
+| `registry build <dir>` | **v0.3** — rebuild `registry.json` + the static gallery |
 
 ## The sheet prompts
 
@@ -119,14 +122,28 @@ writes them down and generates them for you.
 - **A pure-JS PNG codec** (`src/pngcodec.mjs`) — decode (grey/RGB/palette/
   alpha, 8/16-bit) + encode on Node's zlib, so Forge keeps zero deps.
 
+## What's new in v0.3
+
+- **`export wowkit`** — a real WowKit v2 project (format verified against
+  WowKit's own cast files): the base drawing as the cutout, a 15-joint
+  skeleton estimated from the pack's face geometry, and a generated
+  gentle-sway animation in the cast's units. On Doodle Swapnil the head
+  joint lands at x=361 — her face centre is 360. Estimates are flagged in
+  the file; refine them in WowKit's workshop.
+- **`facepacks`** — pose packs stop being mute: every key gets a blink tile
+  and five mouth tiles (rest/M/A/O/E), each filled with skin sampled in a
+  ring around its rect *on that key* (Motion's facepatch trick), indexed
+  in the pack's `pack.json`. QA now warns when a pose pack has none.
+- **The registry** — `publish` drops a QA-passed `.rigpop-pack` into a
+  registry folder; `registry build` regenerates `registry.json` and a
+  static gallery page. A folder + JSON: boring tech every app can read.
+
 ## Roadmap
 
-- **v0.3 — wowkit export:** project JSON with joints, from motion anchors.
-- **v0.3 — pose-pack face patches:** port rigpop-motion's facepatch so pose
-  packs keep blinking and lip-syncing.
-- **v0.3 — registry:** publish/discover `.rigpop-pack` characters.
-- **Later — rig refinement:** sleeves painted into torsos, rubber-hose limb
-  strips (the v3 motion tricks), and anchor hand-tuning UI.
+- **v0.4 — rig refinement:** sleeves painted into torsos, rubber-hose limb
+  strips (the v3 motion tricks), anchor hand-tuning helpers.
+- **Later — registry hosting:** serve a registry from GitHub Pages, and a
+  `fetch` command to pull a pack by id.
 
 ## Tests & visuals
 

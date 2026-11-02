@@ -91,6 +91,65 @@ export function cropPart(img, bbox, keep = null, pad = 2) {
   return { img: { w, h, data }, origin: { x: x0, y: y0 } };
 }
 
+/** Bilinear resize to an exact size. */
+export function resize(img, w, h) {
+  const data = new Uint8ClampedArray(w * h * 4);
+  for (let y = 0; y < h; y++) {
+    for (let x = 0; x < w; x++) {
+      const sx = (x + 0.5) * (img.w / w) - 0.5, sy = (y + 0.5) * (img.h / h) - 0.5;
+      const x0 = Math.max(0, Math.floor(sx)), y0 = Math.max(0, Math.floor(sy));
+      const x1 = Math.min(img.w - 1, x0 + 1), y1 = Math.min(img.h - 1, y0 + 1);
+      const fx = Math.min(1, Math.max(0, sx - x0)), fy = Math.min(1, Math.max(0, sy - y0));
+      for (let c = 0; c < 4; c++) {
+        const v = (img.data[(y0 * img.w + x0) * 4 + c] * (1 - fx) + img.data[(y0 * img.w + x1) * 4 + c] * fx) * (1 - fy)
+          + (img.data[(y1 * img.w + x0) * 4 + c] * (1 - fx) + img.data[(y1 * img.w + x1) * 4 + c] * fx) * fy;
+        data[(y * w + x) * 4 + c] = v;
+      }
+    }
+  }
+  return { w, h, data };
+}
+
+/** Alpha-composite src onto dst at (dx, dy), in place on dst. */
+export function composite(dst, src, dx, dy) {
+  for (let y = 0; y < src.h; y++) {
+    for (let x = 0; x < src.w; x++) {
+      const tx = dx + x, ty = dy + y;
+      if (tx < 0 || ty < 0 || tx >= dst.w || ty >= dst.h) continue;
+      const s = (y * src.w + x) * 4, d = (ty * dst.w + tx) * 4;
+      const sa = src.data[s + 3] / 255;
+      if (!sa) continue;
+      for (let c = 0; c < 3; c++) dst.data[d + c] = src.data[s + c] * sa + dst.data[d + c] * (1 - sa);
+      dst.data[d + 3] = Math.max(dst.data[d + 3], src.data[s + 3]);
+    }
+  }
+  return dst;
+}
+
+/** Median opaque colour in the band just OUTSIDE a rect — the skin a face
+ *  patch should be filled with so its edges vanish into the drawing
+ *  (rigpop-motion's facepatch trick). Returns [r,g,b] or null. */
+export function sampleRing(img, rect, band = 8) {
+  const rs = [], gs = [], bs = [];
+  const x0 = Math.max(0, rect.x - band), x1 = Math.min(img.w, rect.x + rect.w + band);
+  const y0 = Math.max(0, rect.y - band), y1 = Math.min(img.h, rect.y + rect.h + band);
+  for (let y = y0; y < y1; y++) for (let x = x0; x < x1; x++) {
+    if (x >= rect.x && x < rect.x + rect.w && y >= rect.y && y < rect.y + rect.h) continue;
+    const i = (y * img.w + x) * 4;
+    if (img.data[i + 3] < 200) continue;
+    rs.push(img.data[i]); gs.push(img.data[i + 1]); bs.push(img.data[i + 2]);
+  }
+  if (!rs.length) return null;
+  const med = (arr) => arr.sort((a, b) => a - b)[arr.length >> 1];
+  return [med(rs), med(gs), med(bs)];
+}
+
+export function solidImage(w, h, [r, g, b, a = 255]) {
+  const data = new Uint8ClampedArray(w * h * 4);
+  for (let i = 0; i < data.length; i += 4) { data[i] = r; data[i + 1] = g; data[i + 2] = b; data[i + 3] = a; }
+  return { w, h, data };
+}
+
 /** Tight alpha bbox of an image (for anchor maths on a cropped part). */
 export function tightBbox(img, threshold = 32) {
   let minX = img.w, maxX = -1, minY = img.h, maxY = -1, count = 0, sx = 0, sy = 0;
