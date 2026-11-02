@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="190" viewBox="0 0 1180 190" font-family="Verdana, sans-serif">
+  <rect x="0" y="0" width="1180" height="190" rx="18" fill="#FFF6E5"/>
+  <!-- boxes -->
+  <g font-size="19" font-weight="bold" fill="#1F2228" text-anchor="middle">
+    <rect x="20" y="55" width="170" height="80" rx="14" fill="#FFFFFF" stroke="#FF4D8D" stroke-width="3"/>
+    <text x="105" y="90">✏️ drawing</text><text x="105" y="118" font-size="14" font-weight="normal">or photo</text>
+    <rect x="250" y="55" width="170" height="80" rx="14" fill="#FFFFFF" stroke="#FF4D8D" stroke-width="3"/>
+    <text x="335" y="90">📜 prompts</text><text x="335" y="118" font-size="14" font-weight="normal">6 sheet prompts</text>
+    <rect x="480" y="55" width="170" height="80" rx="14" fill="#FFFFFF" stroke="#FF4D8D" stroke-width="3"/>
+    <text x="565" y="90">🎨 image model</text><text x="565" y="118" font-size="14" font-weight="normal">any model paints</text>
+    <rect x="710" y="55" width="170" height="80" rx="14" fill="#FFD23F" stroke="#1F2228" stroke-width="3"/>
+    <text x="795" y="90">📦 forge pack</text><text x="795" y="118" font-size="14" font-weight="normal">character.rigpop.json</text>
+    <rect x="940" y="20" width="220" height="66" rx="14" fill="#FFFFFF" stroke="#00A676" stroke-width="3"/>
+    <text x="1050" y="48" font-size="17">🚪 QA gate</text><text x="1050" y="72" font-size="13" font-weight="normal">rects · sizes · parts</text>
+    <rect x="940" y="104" width="220" height="66" rx="14" fill="#FFFFFF" stroke="#2483FF" stroke-width="3"/>
+    <text x="1050" y="132" font-size="17">🎬 talk · agents · motion</text><text x="1050" y="156" font-size="13" font-weight="normal">exported, ready to act</text>
+  </g>
+  <!-- arrows -->
+  <g stroke="#1F2228" stroke-width="3" fill="#1F2228">
+    <path d="M192 95 H244" /><polygon points="244,88 258,95 244,102"/>
+    <path d="M422 95 H474" /><polygon points="474,88 488,95 474,102"/>
+    <path d="M652 95 H704" /><polygon points="704,88 718,95 704,102"/>
+    <path d="M880 80 C 905 70, 912 60, 934 53" fill="none"/><polygon points="934,46 942,60 926,58"/>
+    <path d="M880 112 C 905 122, 912 130, 934 136" fill="none"/><polygon points="926,130 942,132 934,146"/>
+  </g>
+</svg>
