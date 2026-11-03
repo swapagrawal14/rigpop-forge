@@ -16,6 +16,9 @@ import { makeFacePatches } from '../src/facepack.mjs';
 import { exportWowkit } from '../src/wowkit.mjs';
 import { buildFacepacks } from '../src/facepacks.mjs';
 import { buildRegistry, publish } from '../src/registry.mjs';
+import { fetchPack } from '../src/fetch.mjs';
+import { tune } from '../src/tune.mjs';
+import { normalisePack } from '../src/normalise.mjs';
 
 const HELP = `rigpop-forge — one drawing in, a character pack out
 
@@ -48,6 +51,12 @@ const HELP = `rigpop-forge — one drawing in, a character pack out
       QA-pack the character into a registry and rebuild its catalog.
   registry build <dir>
       Rebuild registry.json + the static gallery in a registry folder.
+  fetch <registryDir|url> <id> --out <dir>
+      Pull a pack from a registry by id, verifying every file's sha256.
+  tune <packDir> [--set <part>:<path>=<number>]
+      List rig anchors, adjust one, and render motion/rig-preview.png.
+  normalise <packDir> [--pack <name>]
+      Pose-pack keys onto one height + floor line (face rects follow).
 `;
 
 function args(argv) {
@@ -159,6 +168,28 @@ try {
     if (pos[0] !== 'build' || !pos[1]) fail('usage: rigpop-forge registry build <dir>');
     const entries = buildRegistry(resolve(pos[1]));
     console.log(`✓ registry rebuilt: ${entries.length} pack(s) — see registry.json + index.html in ${resolve(pos[1])}`);
+  }
+
+  else if (cmd === 'fetch') {
+    const [registry, id] = pos;
+    if (!registry || !id) fail('usage: rigpop-forge fetch <registryDir|url> <id> --out <dir>');
+    const { dest, files, bytes } = await fetchPack(registry, id, resolve(flags.out || '.'));
+    console.log(`✓ fetched ${id}: ${files} files, ${Math.round(bytes / 1024)} KB, sha256-verified -> ${dest}`);
+  }
+
+  else if (cmd === 'tune') {
+    const dir = resolve(pos[0] || '.');
+    const { changes, anchors, preview } = tune(dir, { set: flags.set || null });
+    for (const c of changes) console.log(`  set ${c}`);
+    for (const a of anchors) console.log(`  ${a}`);
+    console.log(`✓ rig preview: ${preview}`);
+  }
+
+  else if (cmd === 'normalise') {
+    const dir = resolve(pos[0] || '.');
+    const { report } = normalisePack(dir, flags.pack || null);
+    for (const line of report) console.log(`  ${line}`);
+    console.log(`✓ pose packs normalised — run qa, then facepacks to rebuild face tiles`);
   }
 
   else if (cmd === 'pack') {

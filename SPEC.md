@@ -130,6 +130,23 @@ catalog (`{format: "rigpop-registry", version: 1, packs: [...]}`) and a
 static `index.html` gallery. `publish` QA-packs a character into it;
 `registry build` regenerates the catalog and gallery.
 
+## Fetch, tune, normalise (v0.4)
+
+`fetch <registry> <id>` pulls a pack from a registry (local folder or
+http(s) base URL, e.g. GitHub Pages) and verifies every file against the
+sha256 in the pack's `pack.json` index before writing it.
+
+`tune` is the anchor-tuning surface for a motion rig: it lists every
+anchor value (`<part>:<path> = n`), applies `--set <part>:<path>=<number>`
+edits (clearing `anchorsEstimated` once a human has tuned), and renders
+`motion/rig-preview.png`, a parts contact sheet with anchor points drawn
+on.
+
+`normalise` puts a pose pack's keys on one figure height and one floor
+line (bbox bottoms aligned, figures centred, one shared canvas). Face
+rects are moved by the average transform; stale face tiles are removed
+and must be rebuilt with `facepacks`.
+
 ## Versioning
 
 `spec: 1`. Breaking changes bump the integer; exporters refuse nothing —

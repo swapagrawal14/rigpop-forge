@@ -40,6 +40,9 @@ src/facepack.mjs      states diff -> talk patches + rects
 src/wowkit.mjs        WowKit v2 export: joints estimated from face geometry
 src/facepacks.mjs     pose-pack blink/mouth tiles (skin-sampled) + pack.json
 src/registry.mjs      publish / registry.json catalog / static gallery
+src/fetch.mjs         registry -> local pack, sha256-verified per file
+src/tune.mjs          rig anchor list/set + rig-preview.png contact sheet
+src/normalise.mjs     pose-pack keys -> one height + floor line
 examples/             real, QA-passing packs — keep them passing
 test/                 node --test suites; run before every push
 ```

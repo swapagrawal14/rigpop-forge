@@ -2,10 +2,10 @@
 
 ![rigpop-forge — one drawing in, a character pack out](docs/assets/hero.png)
 
-![Node >= 20](https://img.shields.io/badge/node-%3E%3D20-339933) ![spec v1](https://img.shields.io/badge/character%20spec-v1-FF4D8D) ![tests](https://img.shields.io/badge/tests-16%20passing-00A676) ![zero dependencies](https://img.shields.io/badge/dependencies-0-FFD23F) ![MIT](https://img.shields.io/badge/license-MIT-blue)
+![Node >= 20](https://img.shields.io/badge/node-%3E%3D20-339933) ![spec v1](https://img.shields.io/badge/character%20spec-v1-FF4D8D) ![tests](https://img.shields.io/badge/tests-19%20passing-00A676) ![zero dependencies](https://img.shields.io/badge/dependencies-0-FFD23F) ![MIT](https://img.shields.io/badge/license-MIT-blue)
 
-**v0.3 is here:** characters now travel — WowKit export, pose-pack face
-patches, and a publishable registry. Still zero dependencies.
+**v0.4 is here:** rigs get refinable (`tune`, `normalise`) and packs get
+fetchable (`fetch`, sha256-verified). Still zero dependencies.
 
 **The character factory for the Rigpop family.** Engines were never the
 problem — talking busts, agent-rendered videos, full cartoons, ink restyles,
@@ -85,6 +85,9 @@ node bin/rigpop-forge.js import-talk ../rigpop-talk/characters kdswapnil \
 | `facepacks <pack> [--face x,y,w,h]` | **v0.3** — pose-pack blink/mouth tiles, skin-sampled per key, indexed in `pack.json` |
 | `publish <pack> --registry <dir>` | **v0.3** — QA-pack a character into a registry and rebuild its catalog |
 | `registry build <dir>` | **v0.3** — rebuild `registry.json` + the static gallery |
+| `fetch <registry> <id> --out <dir>` | **v0.4** — pull a pack by id from a registry folder or URL, sha256-verified per file |
+| `tune <pack> [--set torso:hip.y=512]` | **v0.4** — list/adjust rig anchors; renders `motion/rig-preview.png` with anchors drawn on the parts |
+| `normalise <pack>` | **v0.4** — pose-pack keys onto one height + floor line, face rects follow |
 
 ## The sheet prompts
 
@@ -138,12 +141,27 @@ writes them down and generates them for you.
   registry folder; `registry build` regenerates `registry.json` and a
   static gallery page. A folder + JSON: boring tech every app can read.
 
+## What's new in v0.4
+
+- **`fetch`** — registries are now two-way: pull any pack by id from a
+  registry folder *or* a hosted URL, with every file sha256-verified
+  against its pack index before it lands.
+- **`tune`** — the anchor hand-tuning helper: lists every rig anchor,
+  `--set torso:hip.y=512` adjusts one (and clears the `anchorsEstimated`
+  flag once a human has tuned), and every run renders
+  `motion/rig-preview.png` — the parts with their anchor points drawn on,
+  so estimates can be checked by eye instead of by JSON.
+- **`normalise`** — Motion's hardest pose-pack lesson as a command: keys
+  rescaled to one figure height, bbox bottoms on one floor line, figures
+  centred. Face rects move by the average transform; stale face tiles are
+  removed rather than silently kept (re-run `facepacks`).
+
 ## Roadmap
 
-- **v0.4 — rig refinement:** sleeves painted into torsos, rubber-hose limb
-  strips (the v3 motion tricks), anchor hand-tuning helpers.
-- **Later — registry hosting:** serve a registry from GitHub Pages, and a
-  `fetch` command to pull a pack by id.
+- **v0.5 — painted refinements:** sleeves painted into torsos and
+  rubber-hose limb strips (the v3 motion tricks) as cut options.
+- **Later — registry hosting:** a one-command GitHub Pages deploy for a
+  registry folder.
 
 ## Tests & visuals
 
