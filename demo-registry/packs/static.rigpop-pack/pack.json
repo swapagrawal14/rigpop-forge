@@ -1,0 +1,64 @@
+{
+  "format": "rigpop-pack",
+  "spec": 1,
+  "id": "static",
+  "name": "Static the TV Kid",
+  "packedAt": "2026-11-03T06:05:13.684Z",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 491,
+      "sha256": "fc1281e7d1e7319408745b856aeda9e0bd497d441029d40d7f330464b99e125f"
+    },
+    {
+      "path": "character.rigpop.json",
+      "bytes": 1169,
+      "sha256": "e05d61f4aa4bd05d6b6750ba010d8e4aabd34bc643cf4b3746e3886023b988ed"
+    },
+    {
+      "path": "talk/A.png",
+      "bytes": 6591,
+      "sha256": "b49c66c04415e6d3b479b08baf9455b3d13fba3bbf06968e4cea0c5d9bc8610f"
+    },
+    {
+      "path": "talk/E.png",
+      "bytes": 9977,
+      "sha256": "d14d6c0873a3458a240ee1324ad53a6e0bc4f774210bb99b5ae89df46ac8375e"
+    },
+    {
+      "path": "talk/O.png",
+      "bytes": 3783,
+      "sha256": "9be2541d863d830e01fd8328755120555ae4d59bac51ed6bbec67ccc644d3319"
+    },
+    {
+      "path": "talk/base.png",
+      "bytes": 492486,
+      "sha256": "a1d196e6261b7c8d7358646a53b1f86b8fecb61073bb1c23f7dfb3e87aaa254b"
+    },
+    {
+      "path": "talk/blink.png",
+      "bytes": 6414,
+      "sha256": "508ca82542edec02b12345feaf1f26f656bada3cc15ecf019dd49c3875ae6c55"
+    },
+    {
+      "path": "talk/pose_open.png",
+      "bytes": 389994,
+      "sha256": "484ad016765ac05ef607cd3d6345f6d0781a5102f3a8f412c922cd8967b1a453"
+    },
+    {
+      "path": "talk/pose_point.png",
+      "bytes": 559004,
+      "sha256": "7c27627952c8af6c29510ad9d20ecd3e86ab97378b0832e21358b1feffd40161"
+    },
+    {
+      "path": "talk/pose_thumbs.png",
+      "bytes": 514163,
+      "sha256": "cec9f25180808ea9ab575b2f2c43516a6be7e2161d5915369ca3f31c5c949190"
+    },
+    {
+      "path": "talk/pose_wave.png",
+      "bytes": 553297,
+      "sha256": "d4db7b1cbdc84f44deb631423224de29e4aafa74148e53ffab0435f52f5b059d"
+    }
+  ]
+}

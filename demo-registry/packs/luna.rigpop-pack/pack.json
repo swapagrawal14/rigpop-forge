@@ -1,0 +1,64 @@
+{
+  "format": "rigpop-pack",
+  "spec": 1,
+  "id": "luna",
+  "name": "Luna the Moth Girl",
+  "packedAt": "2026-11-03T06:05:12.565Z",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 492,
+      "sha256": "13afe50c0d9304200c025dfbba7624ff98d9d021c0e85433cf5adbdaeafba210"
+    },
+    {
+      "path": "character.rigpop.json",
+      "bytes": 1146,
+      "sha256": "90fa413cd4ca7e8afe424ee2428cb89662dc0d3286aebab091803884626f88f7"
+    },
+    {
+      "path": "talk/A.png",
+      "bytes": 4247,
+      "sha256": "4376be64ea3bc56d918d54d7bf1e3663e4d754f448e5ff2c72c484eec33de952"
+    },
+    {
+      "path": "talk/E.png",
+      "bytes": 4413,
+      "sha256": "3267a9acd590757f03a653c09651f2988d06ce547b9fb933a2131462713a08a5"
+    },
+    {
+      "path": "talk/O.png",
+      "bytes": 2665,
+      "sha256": "1b355bd9f46ef57b07f9f40854e9180634882e44656c902dfdfbf628d4f17d34"
+    },
+    {
+      "path": "talk/base.png",
+      "bytes": 496966,
+      "sha256": "a2ce8a2d8683206606a2d8b56a0508bef19f6d666190a177bc3c618256b3bf66"
+    },
+    {
+      "path": "talk/blink.png",
+      "bytes": 7793,
+      "sha256": "670e171282ebcdfe51637485774a0505c0c0dc856d9ccc5cecbd931ec88d70f0"
+    },
+    {
+      "path": "talk/pose_open.png",
+      "bytes": 445663,
+      "sha256": "aaaea53463c95ad23f2153d97b57a88632f872371bf07a602f8237314f141be6"
+    },
+    {
+      "path": "talk/pose_point.png",
+      "bytes": 509757,
+      "sha256": "177de70354785e24de34e30d6563357cb6ddb78519cc61a7422eac5a35d6ee9c"
+    },
+    {
+      "path": "talk/pose_thumbs.png",
+      "bytes": 510957,
+      "sha256": "375b415daa98f247ea00dce20cf741aff90d3eac3c39b70956ca5c88c0ac508d"
+    },
+    {
+      "path": "talk/pose_wave.png",
+      "bytes": 522528,
+      "sha256": "cc6701ea892b597d652c6f43315176deb71886b0410a72d28b87563c361241eb"
+    }
+  ]
+}

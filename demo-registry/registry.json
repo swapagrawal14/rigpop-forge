@@ -1,8 +1,31 @@
 {
   "format": "rigpop-registry",
   "version": 1,
-  "builtAt": "2026-11-03T05:29:08.078Z",
+  "builtAt": "2026-11-03T06:05:13.779Z",
   "packs": [
+    {
+      "id": "bubbles",
+      "name": "Bubbles the Fishbowl Girl",
+      "author": "Swapnil Agrawal",
+      "license": "MIT",
+      "spec": 1,
+      "canvas": {
+        "w": 720,
+        "h": 936
+      },
+      "voice": "en-US-AvaMultilingualNeural",
+      "poses": [
+        "wave",
+        "point",
+        "open",
+        "thumbs"
+      ],
+      "hasMotion": false,
+      "files": 11,
+      "bytes": 2787268,
+      "pack": "packs/bubbles.rigpop-pack",
+      "preview": "packs/bubbles.rigpop-pack/talk/base.png"
+    },
     {
       "id": "bunty",
       "name": "Bunty the Bot",
@@ -71,6 +94,29 @@
       "bytes": 2670361,
       "pack": "packs/kiko.rigpop-pack",
       "preview": "packs/kiko.rigpop-pack/talk/base.png"
+    },
+    {
+      "id": "luna",
+      "name": "Luna the Moth Girl",
+      "author": "Swapnil Agrawal",
+      "license": "MIT",
+      "spec": 1,
+      "canvas": {
+        "w": 720,
+        "h": 936
+      },
+      "voice": "en-GB-SoniaNeural",
+      "poses": [
+        "wave",
+        "point",
+        "open",
+        "thumbs"
+      ],
+      "hasMotion": false,
+      "files": 11,
+      "bytes": 2506627,
+      "pack": "packs/luna.rigpop-pack",
+      "preview": "packs/luna.rigpop-pack/talk/base.png"
     },
     {
       "id": "mira",
@@ -142,6 +188,29 @@
       "preview": "packs/pia.rigpop-pack/talk/base.png"
     },
     {
+      "id": "puni",
+      "name": "Puni the Slime",
+      "author": "Swapnil Agrawal",
+      "license": "MIT",
+      "spec": 1,
+      "canvas": {
+        "w": 720,
+        "h": 936
+      },
+      "voice": "en-GB-RyanNeural",
+      "poses": [
+        "wave",
+        "point",
+        "open",
+        "thumbs"
+      ],
+      "hasMotion": false,
+      "files": 11,
+      "bytes": 1650068,
+      "pack": "packs/puni.rigpop-pack",
+      "preview": "packs/puni.rigpop-pack/talk/base.png"
+    },
+    {
       "id": "rafi",
       "name": "Rafi the Rickshaw Poet",
       "author": "Swapnil Agrawal",
@@ -186,6 +255,29 @@
       "bytes": 1164689,
       "pack": "packs/solana.rigpop-pack",
       "preview": "packs/solana.rigpop-pack/talk/base.png"
+    },
+    {
+      "id": "static",
+      "name": "Static the TV Kid",
+      "author": "Swapnil Agrawal",
+      "license": "MIT",
+      "spec": 1,
+      "canvas": {
+        "w": 720,
+        "h": 936
+      },
+      "voice": "en-US-AndrewMultilingualNeural",
+      "poses": [
+        "wave",
+        "point",
+        "open",
+        "thumbs"
+      ],
+      "hasMotion": false,
+      "files": 11,
+      "bytes": 2537369,
+      "pack": "packs/static.rigpop-pack",
+      "preview": "packs/static.rigpop-pack/talk/base.png"
     }
   ]
 }

@@ -1,0 +1,64 @@
+{
+  "format": "rigpop-pack",
+  "spec": 1,
+  "id": "puni",
+  "name": "Puni the Slime",
+  "packedAt": "2026-11-03T06:05:13.215Z",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 488,
+      "sha256": "e25761051dc3cd70a206993e5f495a2f78ec5c3f9c1008f06bec08f5b2bbc08c"
+    },
+    {
+      "path": "character.rigpop.json",
+      "bytes": 1144,
+      "sha256": "c5152d3bc23ff627875baa44e4ea5f9980bc8be16e1411ccba73a9effc79d3f4"
+    },
+    {
+      "path": "talk/A.png",
+      "bytes": 47608,
+      "sha256": "97b65697d5876dae7192317794fd6fc44792083246cb2f8c082c3ac4c9edd8bf"
+    },
+    {
+      "path": "talk/E.png",
+      "bytes": 50763,
+      "sha256": "53626efcb6180f75824ef0b1be3d43d16e2c172dfb8a9926cfb8bce133115e2f"
+    },
+    {
+      "path": "talk/O.png",
+      "bytes": 22228,
+      "sha256": "9ce92cb05c8e30a641b3408fb55277cb0933225c375e25a481568bd92f6a0263"
+    },
+    {
+      "path": "talk/base.png",
+      "bytes": 379836,
+      "sha256": "414c5c94ad047eaf80f0a5832a78326ae1b408f8f3863e09d230d341c825d630"
+    },
+    {
+      "path": "talk/blink.png",
+      "bytes": 9555,
+      "sha256": "70ba5edb498777af17ee70ce1604d3d369fb3f8a72d503f4c56c3bc45fb0b218"
+    },
+    {
+      "path": "talk/pose_open.png",
+      "bytes": 240949,
+      "sha256": "2780d56043a90a1d3fc0aee864770b8885cf694fbb6e8255597238e9c788d95a"
+    },
+    {
+      "path": "talk/pose_point.png",
+      "bytes": 266040,
+      "sha256": "53f02db498527f9f2a7b32465d6c4b76b8c03193d579721b46f4b2a4bb57be8d"
+    },
+    {
+      "path": "talk/pose_thumbs.png",
+      "bytes": 303562,
+      "sha256": "dee950d8035c765b2891945c65c52c46313c130bb6321e0f2f08a12834944974"
+    },
+    {
+      "path": "talk/pose_wave.png",
+      "bytes": 327895,
+      "sha256": "453f45cd1acadebb36c4296d8c260d0f890eb9fb3cc66b8cde1d296c9215cc5b"
+    }
+  ]
+}

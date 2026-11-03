@@ -1,0 +1,64 @@
+{
+  "format": "rigpop-pack",
+  "spec": 1,
+  "id": "bubbles",
+  "name": "Bubbles the Fishbowl Girl",
+  "packedAt": "2026-11-03T06:05:12.039Z",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 499,
+      "sha256": "2f960332c3a66c85eb829f83e487461ea82aef8928a7154b9388a416259c292e"
+    },
+    {
+      "path": "character.rigpop.json",
+      "bytes": 1169,
+      "sha256": "75d424c69fc4e7c1e6af485df9cb96743e8cbaccf3c55a91c2e5cf614a70d201"
+    },
+    {
+      "path": "talk/A.png",
+      "bytes": 11580,
+      "sha256": "798e602d27ae265f5ca3582681bc885df822768f7814d4d6898650c9adb79247"
+    },
+    {
+      "path": "talk/E.png",
+      "bytes": 11818,
+      "sha256": "1cc690313dd98fb221f2f386bc36fa8b519a78fd64de718d52a05bc0b6bb51b5"
+    },
+    {
+      "path": "talk/O.png",
+      "bytes": 10267,
+      "sha256": "87ec888787a526883b874713c7856de9c073b7407d71a7b4213020304e4f8363"
+    },
+    {
+      "path": "talk/base.png",
+      "bytes": 548328,
+      "sha256": "7135841bd70a8f3be9430610f891d7425ee268302e43c1e196322ba3ccd905ae"
+    },
+    {
+      "path": "talk/blink.png",
+      "bytes": 2704,
+      "sha256": "51ad435ba4dd861ac6f469ca3653fc09aadcd7e3ecddf8052d9c5b6013bef96e"
+    },
+    {
+      "path": "talk/pose_open.png",
+      "bytes": 489861,
+      "sha256": "7b3660afc81d41ba7e3df4a224b9d048845fd68d8dc65ab2f6e22739fd231c31"
+    },
+    {
+      "path": "talk/pose_point.png",
+      "bytes": 571256,
+      "sha256": "eac289d2578addd24ee43d815d226b9ea80ccfc6eccb2faf540dfba3fc4eda78"
+    },
+    {
+      "path": "talk/pose_thumbs.png",
+      "bytes": 568420,
+      "sha256": "ef9b8a2b4fe0a0d248082ec66c90b9e086167278424b13c7ee888e6a6a19206e"
+    },
+    {
+      "path": "talk/pose_wave.png",
+      "bytes": 571366,
+      "sha256": "6fa0b7d01988b8f6fcdab78734b54529b2f15227a503ea5277f709ba4468cab9"
+    }
+  ]
+}
