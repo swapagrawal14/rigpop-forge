@@ -1,8 +1,31 @@
 {
   "format": "rigpop-registry",
   "version": 1,
-  "builtAt": "2026-11-03T06:05:13.779Z",
+  "builtAt": "2026-11-03T06:18:55.117Z",
   "packs": [
+    {
+      "id": "bhavishy",
+      "name": "Bhavishy Agrawal",
+      "author": "Swapnil Agrawal",
+      "license": "MIT",
+      "spec": 1,
+      "canvas": {
+        "w": 720,
+        "h": 936
+      },
+      "voice": "en-US-AndrewMultilingualNeural",
+      "poses": [
+        "wave",
+        "point",
+        "open",
+        "thumbs"
+      ],
+      "hasMotion": false,
+      "files": 11,
+      "bytes": 2383531,
+      "pack": "packs/bhavishy.rigpop-pack",
+      "preview": "packs/bhavishy.rigpop-pack/talk/base.png"
+    },
     {
       "id": "bubbles",
       "name": "Bubbles the Fishbowl Girl",
@@ -232,6 +255,52 @@
       "bytes": 1525190,
       "pack": "packs/rafi.rigpop-pack",
       "preview": "packs/rafi.rigpop-pack/talk/base.png"
+    },
+    {
+      "id": "sanjay",
+      "name": "Dr Sanjay Agrawal",
+      "author": "Swapnil Agrawal",
+      "license": "MIT",
+      "spec": 1,
+      "canvas": {
+        "w": 720,
+        "h": 936
+      },
+      "voice": "en-IN-PrabhatNeural",
+      "poses": [
+        "wave",
+        "point",
+        "open",
+        "thumbs"
+      ],
+      "hasMotion": false,
+      "files": 11,
+      "bytes": 2164952,
+      "pack": "packs/sanjay.rigpop-pack",
+      "preview": "packs/sanjay.rigpop-pack/talk/base.png"
+    },
+    {
+      "id": "seema",
+      "name": "Seema Agrawal",
+      "author": "Swapnil Agrawal",
+      "license": "MIT",
+      "spec": 1,
+      "canvas": {
+        "w": 720,
+        "h": 936
+      },
+      "voice": "en-GB-SoniaNeural",
+      "poses": [
+        "wave",
+        "point",
+        "open",
+        "thumbs"
+      ],
+      "hasMotion": false,
+      "files": 11,
+      "bytes": 1909905,
+      "pack": "packs/seema.rigpop-pack",
+      "preview": "packs/seema.rigpop-pack/talk/base.png"
     },
     {
       "id": "solana",

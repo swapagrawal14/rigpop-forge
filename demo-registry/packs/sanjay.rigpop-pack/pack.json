@@ -1,0 +1,64 @@
+{
+  "format": "rigpop-pack",
+  "spec": 1,
+  "id": "sanjay",
+  "name": "Dr Sanjay Agrawal",
+  "packedAt": "2026-11-03T06:18:54.591Z",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 491,
+      "sha256": "1420eda126f82b0948d8221cb6b04f89cc0578eaf7e5955f4d1144cc3affc688"
+    },
+    {
+      "path": "character.rigpop.json",
+      "bytes": 1163,
+      "sha256": "e3bc4acf30600cf673f9cd6f70d450be142ab49e4b020ec93c02af2c415aa0cf"
+    },
+    {
+      "path": "talk/A.png",
+      "bytes": 5519,
+      "sha256": "e5ce9fb2a28bc7e08dbbf7d91e77d5db67c2ab3e401823c9b7b776f2ecc80c91"
+    },
+    {
+      "path": "talk/E.png",
+      "bytes": 5619,
+      "sha256": "771d71fb38f377801459f0e9af13baa64b3300029db97ac6b69edb5257971a89"
+    },
+    {
+      "path": "talk/O.png",
+      "bytes": 4186,
+      "sha256": "d801f0b576620e769cb445ae288de88793732dbcc141697b4657ec6b6222cf2e"
+    },
+    {
+      "path": "talk/base.png",
+      "bytes": 525798,
+      "sha256": "2f6b9f104040eb5b61b4054c13d2a6cceca5156bab372a07f9bc57019224d94a"
+    },
+    {
+      "path": "talk/blink.png",
+      "bytes": 1726,
+      "sha256": "7b1d128ee02faa8329ec82c8f4badba7880bcb252856e5d949f5b2c090c9e23d"
+    },
+    {
+      "path": "talk/pose_open.png",
+      "bytes": 289239,
+      "sha256": "b89729fb50b0cafe3787f588da6b141225ae32ff665eab372bd7995eb8c0caab"
+    },
+    {
+      "path": "talk/pose_point.png",
+      "bytes": 312994,
+      "sha256": "fb59b701f47a0621a0a61910ddba3b5860e836d25fd0f314725b0310f3a40831"
+    },
+    {
+      "path": "talk/pose_thumbs.png",
+      "bytes": 499720,
+      "sha256": "9e8e85d7928f1d055d067ce2cf279117fa395ed06467a3f509a94d4ecda10778"
+    },
+    {
+      "path": "talk/pose_wave.png",
+      "bytes": 518497,
+      "sha256": "307c55bc633f0b8fd63db7aaa9e062a0089e7503371a7bea3cafddcb7bc718c8"
+    }
+  ]
+}
