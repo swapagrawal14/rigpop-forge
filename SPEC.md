@@ -147,6 +147,25 @@ line (bbox bottoms aligned, figures centred, one shared canvas). Face
 rects are moved by the average transform; stale face tiles are removed
 and must be rebuilt with `facepacks`.
 
+## Painted refinements (v0.5)
+
+`sleeves` composites the top of the `arm.upper` part (the sleeve cap)
+onto the torso at both shoulder anchors (right side mirrored) so the
+shoulder joint is always covered by cloth that moves with the body. The
+un-painted torso is kept as `parts/torso.nosleeve.png`; the rig gains
+`sleeves: true`.
+
+`hose` writes rubber-hose strips for limb parts: every row of the part
+resampled to the part's median row width, centred, as
+`parts/<label>.hose.png`, recorded in the rig as
+`parts[label].hose = { file, w, h }` — a Forge extension field other
+Rigpop tools may ignore. A renderer can bend a strip along a curve
+without the art shearing.
+
+`registry site <dir> --out <siteDir>` copies a registry into a
+deployable static site (gallery, catalog, packs) with a GitHub Pages
+workflow at `.github/workflows/pages.yml` and a `DEPLOY.md`.
+
 ## Versioning
 
 `spec: 1`. Breaking changes bump the integer; exporters refuse nothing —

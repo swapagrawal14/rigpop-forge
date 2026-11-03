@@ -19,6 +19,8 @@ import { buildRegistry, publish } from '../src/registry.mjs';
 import { fetchPack } from '../src/fetch.mjs';
 import { tune } from '../src/tune.mjs';
 import { normalisePack } from '../src/normalise.mjs';
+import { makeHose, paintSleeves } from '../src/refine.mjs';
+import { buildSite } from '../src/registry.mjs';
 
 const HELP = `rigpop-forge — one drawing in, a character pack out
 
@@ -57,6 +59,12 @@ const HELP = `rigpop-forge — one drawing in, a character pack out
       List rig anchors, adjust one, and render motion/rig-preview.png.
   normalise <packDir> [--pack <name>]
       Pose-pack keys onto one height + floor line (face rects follow).
+  sleeves <packDir>
+      Paint the arm sleeve caps into the torso at the shoulder anchors.
+  hose <packDir>
+      Rubber-hose strips for limb parts (parts/<label>.hose.png).
+  registry site <dir> --out <siteDir>
+      Copy a registry into a deployable static site + Pages workflow.
 `;
 
 function args(argv) {
@@ -165,9 +173,13 @@ try {
   }
 
   else if (cmd === 'registry') {
-    if (pos[0] !== 'build' || !pos[1]) fail('usage: rigpop-forge registry build <dir>');
-    const entries = buildRegistry(resolve(pos[1]));
-    console.log(`✓ registry rebuilt: ${entries.length} pack(s) — see registry.json + index.html in ${resolve(pos[1])}`);
+    if (pos[0] === 'build' && pos[1]) {
+      const entries = buildRegistry(resolve(pos[1]));
+      console.log(`✓ registry rebuilt: ${entries.length} pack(s) — see registry.json + index.html in ${resolve(pos[1])}`);
+    } else if (pos[0] === 'site' && pos[1] && flags.out) {
+      const entries = buildSite(resolve(pos[1]), resolve(flags.out));
+      console.log(`✓ deployable site in ${resolve(flags.out)}: ${entries.length} pack(s), gallery + catalog + .github/workflows/pages.yml — see DEPLOY.md there`);
+    } else fail('usage: rigpop-forge registry build <dir> | registry site <dir> --out <siteDir>');
   }
 
   else if (cmd === 'fetch') {
@@ -190,6 +202,20 @@ try {
     const { report } = normalisePack(dir, flags.pack || null);
     for (const line of report) console.log(`  ${line}`);
     console.log(`✓ pose packs normalised — run qa, then facepacks to rebuild face tiles`);
+  }
+
+  else if (cmd === 'sleeves') {
+    const dir = resolve(pos[0] || '.');
+    const { report } = paintSleeves(dir);
+    for (const line of report) console.log(`  ${line}`);
+    console.log(`✓ sleeves painted for ${dir}`);
+  }
+
+  else if (cmd === 'hose') {
+    const dir = resolve(pos[0] || '.');
+    const { report } = makeHose(dir);
+    for (const line of report) console.log(`  ${line}`);
+    console.log(`✓ hose strips written for ${dir}`);
   }
 
   else if (cmd === 'pack') {

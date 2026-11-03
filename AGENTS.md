@@ -43,6 +43,7 @@ src/registry.mjs      publish / registry.json catalog / static gallery
 src/fetch.mjs         registry -> local pack, sha256-verified per file
 src/tune.mjs          rig anchor list/set + rig-preview.png contact sheet
 src/normalise.mjs     pose-pack keys -> one height + floor line
+src/refine.mjs        sleeves painted into torso; rubber-hose limb strips
 examples/             real, QA-passing packs — keep them passing
 test/                 node --test suites; run before every push
 ```

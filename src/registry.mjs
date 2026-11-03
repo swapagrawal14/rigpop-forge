@@ -3,9 +3,53 @@
 // `rigpop-forge publish <pack> --registry <dir>`; rebuild the catalog any
 // time with `rigpop-forge registry build <dir>`. Deliberately boring
 // technology — a folder and a JSON file any Rigpop app can read.
-import { existsSync, mkdirSync, readdirSync, readFileSync, statSync, writeFileSync } from 'node:fs';
+import { cpSync, existsSync, mkdirSync, readdirSync, readFileSync, statSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { packCharacter } from './pack.mjs';
+
+export const PAGES_WORKFLOW = `name: Deploy registry to GitHub Pages
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: \${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - id: deployment
+        uses: actions/deploy-pages@v4
+`;
+
+/** Build a deployable static site from a registry: the gallery, catalog
+ *  and packs copied to <out>, plus a GitHub Pages workflow, ready to push
+ *  to any repo and serve. `fetch` works against the hosted URL as-is. */
+export function buildSite(registryDir, outDir) {
+  const entries = buildRegistry(registryDir);
+  mkdirSync(outDir, { recursive: true });
+  cpSync(join(registryDir, 'packs'), join(outDir, 'packs'), { recursive: true });
+  cpSync(join(registryDir, 'registry.json'), join(outDir, 'registry.json'));
+  cpSync(join(registryDir, 'index.html'), join(outDir, 'index.html'));
+  mkdirSync(join(outDir, '.github/workflows'), { recursive: true });
+  writeFileSync(join(outDir, '.github/workflows/pages.yml'), PAGES_WORKFLOW);
+  writeFileSync(join(outDir, 'DEPLOY.md'),
+    `# Hosting this registry\n\n1. Push this folder to a GitHub repo (or copy it into one).\n2. Repo Settings → Pages → Source: "GitHub Actions".\n3. Push to main — the workflow deploys the site.\n4. Anyone can then run:\n\n   rigpop-forge fetch https://<you>.github.io/<repo>/ <pack-id> --out ./characters\n`);
+  return entries;
+}
 
 export function scanRegistry(registryDir) {
   const packsDir = join(registryDir, 'packs');

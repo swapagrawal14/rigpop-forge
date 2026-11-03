@@ -2,10 +2,11 @@
 
 ![rigpop-forge — one drawing in, a character pack out](docs/assets/hero.png)
 
-![Node >= 20](https://img.shields.io/badge/node-%3E%3D20-339933) ![spec v1](https://img.shields.io/badge/character%20spec-v1-FF4D8D) ![tests](https://img.shields.io/badge/tests-19%20passing-00A676) ![zero dependencies](https://img.shields.io/badge/dependencies-0-FFD23F) ![MIT](https://img.shields.io/badge/license-MIT-blue)
+![Node >= 20](https://img.shields.io/badge/node-%3E%3D20-339933) ![spec v1](https://img.shields.io/badge/character%20spec-v1-FF4D8D) ![tests](https://img.shields.io/badge/tests-22%20passing-00A676) ![zero dependencies](https://img.shields.io/badge/dependencies-0-FFD23F) ![MIT](https://img.shields.io/badge/license-MIT-blue)
 
-**v0.4 is here:** rigs get refinable (`tune`, `normalise`) and packs get
-fetchable (`fetch`, sha256-verified). Still zero dependencies.
+**v0.5 is here:** Motion's painted tricks arrive — sleeves in the torso,
+rubber-hose limb strips — and registries deploy to GitHub Pages in one
+command. Still zero dependencies.
 
 **The character factory for the Rigpop family.** Engines were never the
 problem — talking busts, agent-rendered videos, full cartoons, ink restyles,
@@ -88,6 +89,9 @@ node bin/rigpop-forge.js import-talk ../rigpop-talk/characters kdswapnil \
 | `fetch <registry> <id> --out <dir>` | **v0.4** — pull a pack by id from a registry folder or URL, sha256-verified per file |
 | `tune <pack> [--set torso:hip.y=512]` | **v0.4** — list/adjust rig anchors; renders `motion/rig-preview.png` with anchors drawn on the parts |
 | `normalise <pack>` | **v0.4** — pose-pack keys onto one height + floor line, face rects follow |
+| `sleeves <pack>` | **v0.5** — paint the arm sleeve caps into the torso at the shoulders, so joints never show a gap |
+| `hose <pack>` | **v0.5** — rubber-hose strips for limb parts: every row resampled to one median width |
+| `registry site <dir> --out <site>` | **v0.5** — deployable static site + GitHub Pages workflow for a registry |
 
 ## The sheet prompts
 
@@ -156,12 +160,25 @@ writes them down and generates them for you.
   centred. Face rects move by the average transform; stale face tiles are
   removed rather than silently kept (re-run `facepacks`).
 
+## What's new in v0.5
+
+- **`sleeves`** — rigpop-motion's shoulder fix: the top of the upper-arm
+  part is composited onto the torso at both shoulder anchors (mirrored
+  for the right side), so a rotating arm never opens a crescent of
+  background at the joint. Original torso kept as `torso.nosleeve.png`.
+- **`hose`** — rubber-hose strips: each limb part also ships a
+  straightened strip (every row resampled to the median width, centred)
+  that a renderer can bend along a curve without shearing the art.
+- **`registry site`** — a registry becomes a website: gallery, catalog
+  and packs copied into a deployable folder with a ready GitHub Pages
+  workflow and a `DEPLOY.md`. Host it, and `fetch` works against the URL.
+
 ## Roadmap
 
-- **v0.5 — painted refinements:** sleeves painted into torsos and
-  rubber-hose limb strips (the v3 motion tricks) as cut options.
-- **Later — registry hosting:** a one-command GitHub Pages deploy for a
-  registry folder.
+- **v0.6 — duet packs:** two-character Talk scenes from two packs, and
+  voice casting (per-character Edge voice presets in the spec).
+- **Later — hosted demo registry:** this repo's example characters,
+  published as a live Pages registry.
 
 ## Tests & visuals
 

@@ -91,6 +91,28 @@ export function cropPart(img, bbox, keep = null, pad = 2) {
   return { img: { w, h, data }, origin: { x: x0, y: y0 } };
 }
 
+/** Horizontal mirror. */
+export function flipH(img) {
+  const data = new Uint8ClampedArray(img.data.length);
+  for (let y = 0; y < img.h; y++) for (let x = 0; x < img.w; x++) {
+    const s = (y * img.w + x) * 4, d = (y * img.w + (img.w - 1 - x)) * 4;
+    data[d] = img.data[s]; data[d + 1] = img.data[s + 1]; data[d + 2] = img.data[s + 2]; data[d + 3] = img.data[s + 3];
+  }
+  return { w: img.w, h: img.h, data };
+}
+
+/** Crop a plain rectangle region (no component masking). */
+export function cropRect(img, x, y, w, h) {
+  const data = new Uint8ClampedArray(w * h * 4);
+  for (let yy = 0; yy < h; yy++) for (let xx = 0; xx < w; xx++) {
+    const sx = x + xx, sy = y + yy;
+    if (sx < 0 || sy < 0 || sx >= img.w || sy >= img.h) continue;
+    const s = (sy * img.w + sx) * 4, d = (yy * w + xx) * 4;
+    data[d] = img.data[s]; data[d + 1] = img.data[s + 1]; data[d + 2] = img.data[s + 2]; data[d + 3] = img.data[s + 3];
+  }
+  return { w, h, data };
+}
+
 /** Bilinear resize to an exact size. */
 export function resize(img, w, h) {
   const data = new Uint8ClampedArray(w * h * 4);
