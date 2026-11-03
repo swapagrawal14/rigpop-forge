@@ -3,7 +3,7 @@
   "spec": 1,
   "id": "bhavishy",
   "name": "Bhavishy Agrawal",
-  "packedAt": "2026-11-03T06:24:33.337Z",
+  "packedAt": "2026-11-03T07:19:57.550Z",
   "files": [
     {
       "path": "README.md",
@@ -12,8 +12,8 @@
     },
     {
       "path": "character.rigpop.json",
-      "bytes": 1187,
-      "sha256": "4dac30de361a8cdee88158488bce568c8a7095708452804e32d61814da84fa95"
+      "bytes": 1922,
+      "sha256": "fdc4b5decaf76a6da1570e6362b20d6e7994f35f1ece603ec90984906a403a92"
     },
     {
       "path": "talk/A.png",
@@ -42,13 +42,13 @@
     },
     {
       "path": "talk/pose_open.png",
-      "bytes": 334149,
-      "sha256": "0172e1efed487681aed5a6e34051796fc74cd3ce905dbb39b4ffd7d4390603cd"
+      "bytes": 484001,
+      "sha256": "fa28ad0067ce22e103d079586122201e2ad206bf6086e95214a6ef84e0cfb592"
     },
     {
       "path": "talk/pose_point.png",
-      "bytes": 453600,
-      "sha256": "45292c6561db196797fb121e4089c02a3b68b0ed93f7f81302712cd2367a757c"
+      "bytes": 553764,
+      "sha256": "515f70a710c0e5bba9cb0b7d269e95d50b07049a8d2cbc8378931449b5c8d0d9"
     },
     {
       "path": "talk/pose_thumbs.png",

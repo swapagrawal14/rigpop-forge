@@ -1,0 +1,22 @@
+{
+ "swapnil": {
+  "model": "amy",
+  "pitch": 1.05,
+  "length": 1.0
+ },
+ "seema": {
+  "model": "ljspeech",
+  "pitch": 1.03,
+  "length": 1.05
+ },
+ "sanjay": {
+  "model": "amy",
+  "pitch": 0.79,
+  "length": 1.07
+ },
+ "bhavishy": {
+  "model": "ljspeech",
+  "pitch": 0.87,
+  "length": 0.96
+ }
+}

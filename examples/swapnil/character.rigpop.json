@@ -47,6 +47,58 @@
       "point": "talk/pose_point.png",
       "open": "talk/pose_open.png",
       "thumbs": "talk/pose_thumbs.png"
+    },
+    "poseAnchors": {
+      "base": {
+        "mouth": [
+          377,
+          264
+        ],
+        "eyes": [
+          387,
+          193
+        ]
+      },
+      "wave": {
+        "mouth": [
+          392,
+          273
+        ],
+        "eyes": [
+          390,
+          202
+        ]
+      },
+      "point": {
+        "mouth": [
+          248,
+          256
+        ],
+        "eyes": [
+          259,
+          201
+        ]
+      },
+      "open": {
+        "mouth": [
+          367,
+          312
+        ],
+        "eyes": [
+          365,
+          245
+        ]
+      },
+      "thumbs": {
+        "mouth": [
+          363,
+          283
+        ],
+        "eyes": [
+          364,
+          206
+        ]
+      }
     }
   },
   "voice": {

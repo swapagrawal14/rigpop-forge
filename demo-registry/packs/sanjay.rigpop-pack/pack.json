@@ -3,7 +3,7 @@
   "spec": 1,
   "id": "sanjay",
   "name": "Dr Sanjay Agrawal",
-  "packedAt": "2026-11-03T06:24:34.998Z",
+  "packedAt": "2026-11-03T07:19:56.966Z",
   "files": [
     {
       "path": "README.md",
@@ -12,8 +12,8 @@
     },
     {
       "path": "character.rigpop.json",
-      "bytes": 1163,
-      "sha256": "e3bc4acf30600cf673f9cd6f70d450be142ab49e4b020ec93c02af2c415aa0cf"
+      "bytes": 1898,
+      "sha256": "f6aac4bcae57a08242a4b944a0966562a9877c83fc7ae48e74de62b795364a3a"
     },
     {
       "path": "talk/A.png",
@@ -42,23 +42,23 @@
     },
     {
       "path": "talk/pose_open.png",
-      "bytes": 289239,
-      "sha256": "b89729fb50b0cafe3787f588da6b141225ae32ff665eab372bd7995eb8c0caab"
+      "bytes": 498973,
+      "sha256": "13528416ce4f793d91c8a934289b21a0420a470833bf7cc06522ac39e7f8f4b0"
     },
     {
       "path": "talk/pose_point.png",
-      "bytes": 312994,
-      "sha256": "fb59b701f47a0621a0a61910ddba3b5860e836d25fd0f314725b0310f3a40831"
+      "bytes": 438505,
+      "sha256": "ff8822c000208c27ed17cc65edcd77af1fa5c71c2a8ecdcd9530fd6b0ae27ff3"
     },
     {
       "path": "talk/pose_thumbs.png",
-      "bytes": 499720,
-      "sha256": "9e8e85d7928f1d055d067ce2cf279117fa395ed06467a3f509a94d4ecda10778"
+      "bytes": 544563,
+      "sha256": "de4a4a88faef1ca19cb9e51dc72747742877af109a97be9ac5b6f533a733be19"
     },
     {
       "path": "talk/pose_wave.png",
-      "bytes": 518497,
-      "sha256": "307c55bc633f0b8fd63db7aaa9e062a0089e7503371a7bea3cafddcb7bc718c8"
+      "bytes": 574892,
+      "sha256": "68ec1f5157ac4a0199aec7ff8db61005364913fd29c857dd10cd30f3c99df5ca"
     }
   ]
 }

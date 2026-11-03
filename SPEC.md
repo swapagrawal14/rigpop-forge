@@ -30,6 +30,15 @@ unchanged as the core every pack must have:
   poses. Talk/Agents trigger them from words (wave: hello/namaste/bye,
   point: idea/tip/first, open: why/what/kyun, thumbs: great/badhiya/yes),
   so a missing pose is a warning, not an error.
+- `talk.poseAnchors {base, wave, point, open, thumbs}` — optional per-pose
+  `{mouth: [x, y], eyes: [x, y]}` centres on the canvas (v0.7). The
+  `talk.patches` rects are measured on the base pose, but on gesture poses
+  the head sits somewhere else — a renderer that lip-syncs every pose
+  (see `tools/cartoon-render`) centres each patch on the current pose's
+  anchor instead. Measure anchors on the pose art itself: a few px of
+  bias (the classic failure is the lower lip) is plainly visible at
+  close-up zoom. Pose art should also share one figure height and floor
+  across poses, or the character grows and shrinks between gestures.
 - `talk.bg` — optional background colour the apps paint behind the character.
 
 ## The motion layer (optional)

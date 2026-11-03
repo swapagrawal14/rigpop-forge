@@ -3,7 +3,7 @@
   "spec": 1,
   "id": "swapnil",
   "name": "Swapnil Agrawal",
-  "packedAt": "2026-11-03T06:24:35.502Z",
+  "packedAt": "2026-11-03T07:19:56.555Z",
   "files": [
     {
       "path": "README.md",
@@ -12,8 +12,8 @@
     },
     {
       "path": "character.rigpop.json",
-      "bytes": 1187,
-      "sha256": "c992da31aebb107b75586ca98cd3096827bad5489a082eeb9bc9ff423baf264d"
+      "bytes": 1922,
+      "sha256": "1d4ef211ef210658ebb850b8285e10a7b03c77dd346578fd880bc94511b1d6e5"
     },
     {
       "path": "talk/A.png",
@@ -42,23 +42,23 @@
     },
     {
       "path": "talk/pose_open.png",
-      "bytes": 495694,
-      "sha256": "49eca8cc0217b5774392791d8ff8b72d136e659642c18e1eabae41c2d1bedc7c"
+      "bytes": 684802,
+      "sha256": "8dcbb691680d41e3e72f1d622dd214f6b5291bfcf7317cdc8a54605a90e218b4"
     },
     {
       "path": "talk/pose_point.png",
-      "bytes": 562502,
-      "sha256": "000ed4b26c780f2c700c7a9bf1baa1982ebfd9df1ebcf6c5555d14b08ca9f401"
+      "bytes": 736460,
+      "sha256": "2a1eccbdfa1c44d1e1719c005da030718824aef96415e69746aac6217bd94884"
     },
     {
       "path": "talk/pose_thumbs.png",
-      "bytes": 486779,
-      "sha256": "9ba32942e5ed1f0f52c24f0aa931e35831e6b4a478815bb7337767d3d4c21050"
+      "bytes": 713765,
+      "sha256": "31aefa7e5775e3c5fd62e7ff403205b75e67186473a65db094eddaec3c974456"
     },
     {
       "path": "talk/pose_wave.png",
-      "bytes": 705826,
-      "sha256": "c26a3baf19a2bc66856172b4d574688a79597b400d554f078384db33e7a232cf"
+      "bytes": 798130,
+      "sha256": "c2e179721617de3ae357ed948bbe5bf84b28dea5e5e123a285f9fb05d93c6220"
     }
   ]
 }

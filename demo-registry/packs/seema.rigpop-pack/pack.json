@@ -3,7 +3,7 @@
   "spec": 1,
   "id": "seema",
   "name": "Seema Agrawal",
-  "packedAt": "2026-11-03T06:24:35.105Z",
+  "packedAt": "2026-11-03T07:19:57.278Z",
   "files": [
     {
       "path": "README.md",
@@ -12,8 +12,8 @@
     },
     {
       "path": "character.rigpop.json",
-      "bytes": 1171,
-      "sha256": "bcf4a233686e8bf42c95ea139d101384fe6e8a6b27a36ea2a8bcb21f0fb9e46a"
+      "bytes": 1906,
+      "sha256": "7840dab7d0caa147e6092a965e4c97cdce42141aca2c4e5f833de84faac2ed05"
     },
     {
       "path": "talk/A.png",
@@ -42,8 +42,8 @@
     },
     {
       "path": "talk/pose_open.png",
-      "bytes": 295200,
-      "sha256": "d4acedaa66eeb4f018bb14da9789e969b5841df0e9b8ea3670174b321f66f69e"
+      "bytes": 412577,
+      "sha256": "ae3f849ddadde3fb6d48910d7256ccbeb0a188114149d8f365044c56112ecb3c"
     },
     {
       "path": "talk/pose_point.png",

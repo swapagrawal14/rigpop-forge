@@ -48,6 +48,8 @@ src/voices.mjs        Edge TTS preset roster + casting
 src/duet.mjs          two packs -> duet scene bundle
 examples/             real, QA-passing packs — keep them passing
 test/                 node --test suites; run before every push
+tools/cartoon-render/ optional Python episode renderer (not the CLI;
+                      reads talk.poseAnchors when a pack carries them)
 ```
 
 ## Before you push

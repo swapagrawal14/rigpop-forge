@@ -1,7 +1,7 @@
 {
   "format": "rigpop-registry",
   "version": 1,
-  "builtAt": "2026-11-03T06:24:35.599Z",
+  "builtAt": "2026-11-03T07:19:57.554Z",
   "packs": [
     {
       "id": "bhavishy",
@@ -22,7 +22,7 @@
       ],
       "hasMotion": false,
       "files": 11,
-      "bytes": 2383531,
+      "bytes": 2634282,
       "pack": "packs/bhavishy.rigpop-pack",
       "preview": "packs/bhavishy.rigpop-pack/talk/base.png"
     },
@@ -275,7 +275,7 @@
       ],
       "hasMotion": false,
       "files": 11,
-      "bytes": 2164952,
+      "bytes": 2602170,
       "pack": "packs/sanjay.rigpop-pack",
       "preview": "packs/sanjay.rigpop-pack/talk/base.png"
     },
@@ -298,7 +298,7 @@
       ],
       "hasMotion": false,
       "files": 11,
-      "bytes": 1909905,
+      "bytes": 2028017,
       "pack": "packs/seema.rigpop-pack",
       "preview": "packs/seema.rigpop-pack/talk/base.png"
     },
@@ -367,7 +367,7 @@
       ],
       "hasMotion": false,
       "files": 11,
-      "bytes": 2987993,
+      "bytes": 3671084,
       "pack": "packs/swapnil.rigpop-pack",
       "preview": "packs/swapnil.rigpop-pack/talk/base.png"
     }

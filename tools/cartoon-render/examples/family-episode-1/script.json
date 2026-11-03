@@ -1,0 +1,265 @@
+{
+ "title": "THE AGRAWAL FAMILY",
+ "subtitle": "Episode 1 - The Cartoon Family",
+ "scenes": [
+  {
+   "id": "living",
+   "bg": "bg-living.jpg",
+   "cast": {
+    "swapnil": 430,
+    "sanjay": 800,
+    "seema": 1170,
+    "bhavishy": 1540
+   },
+   "lines": [
+    [
+     "swapnil",
+     "wave",
+     "Everyone, family meeting! I have a surprise. I turned all of us into cartoon characters!"
+    ],
+    [
+     "bhavishy",
+     "open",
+     "Wait, what? Like, actual cartoons? With our faces?"
+    ],
+    [
+     "swapnil",
+     "point",
+     "Yes! Look at us. Same family, just drawn with a blue marker."
+    ],
+    [
+     "sanjay",
+     "base",
+     "Hmm. Let me check one thing first... good, my tilak is still there. Continue."
+    ],
+    [
+     "seema",
+     "open",
+     "Arre, my saree looks better in the cartoon. And no grey hair. I approve!"
+    ],
+    [
+     "bhavishy",
+     "thumbs",
+     "I look good! But only five poses? A hero needs at least fifty."
+    ],
+    [
+     "swapnil",
+     "base",
+     "You have five poses and three mouths, Bhavishy. That is more range than you show at breakfast."
+    ],
+    [
+     "sanjay",
+     "point",
+     "She is not wrong. At breakfast, you have exactly one expression. Sleepy."
+    ],
+    [
+     "seema",
+     "wave",
+     "And one dialogue. Mummy, five more minutes."
+    ],
+    [
+     "bhavishy",
+     "base",
+     "Okay, okay. But tell me honestly. In cartoon world, do I finally win arguments?"
+    ],
+    [
+     "swapnil",
+     "thumbs",
+     "In cartoon world, you still lose. But now you lose in high definition."
+    ]
+   ]
+  },
+  {
+   "id": "kitchen",
+   "bg": "bg-kitchen.jpg",
+   "cast": {
+    "seema": 430,
+    "swapnil": 800,
+    "sanjay": 1170,
+    "bhavishy": 1540
+   },
+   "lines": [
+    [
+     "seema",
+     "wave",
+     "Now listen. If this is my cartoon kitchen, I have one rule. Cartoon mummies do not wash cartoon dishes."
+    ],
+    [
+     "swapnil",
+     "open",
+     "Deal! In our cartoon, the dishes wash themselves."
+    ],
+    [
+     "bhavishy",
+     "point",
+     "Then cartoon Bhavishy also does not study? Asking for a friend. The friend is me."
+    ],
+    [
+     "sanjay",
+     "base",
+     "Cartoon Papa is still a doctor. If a cartoon gets sick, who will treat him? A cartoon doctor. Correct."
+    ],
+    [
+     "seema",
+     "point",
+     "And cartoon patients must pay real fees. That rule is final."
+    ],
+    [
+     "swapnil",
+     "base",
+     "Mummy is already the best businesswoman in this cartoon."
+    ],
+    [
+     "bhavishy",
+     "open",
+     "Wait, one problem. If we are cartoons, who is drawing us right now?"
+    ],
+    [
+     "sanjay",
+     "base",
+     "Whoever it is, tell them Papa needs a little less tummy, and a little more hair."
+    ],
+    [
+     "seema",
+     "thumbs",
+     "And tell them Seema has not aged since 1998. Draw accordingly."
+    ],
+    [
+     "swapnil",
+     "wave",
+     "Noted! All requests have been sent to the artist. She is me. I am ignoring half of them."
+    ],
+    [
+     "bhavishy",
+     "thumbs",
+     "Classic."
+    ]
+   ]
+  },
+  {
+   "id": "terrace",
+   "bg": "bg-terrace.jpg",
+   "cast": {
+    "swapnil": 430,
+    "seema": 800,
+    "sanjay": 1170,
+    "bhavishy": 1540
+   },
+   "lines": [
+    [
+     "swapnil",
+     "base",
+     "You know, I made these cartoons because our family is already my favourite show."
+    ],
+    [
+     "seema",
+     "base",
+     "Every house has a show, beta. Ours just has better comedy."
+    ],
+    [
+     "sanjay",
+     "point",
+     "And one full-time comedian."
+    ],
+    [
+     "bhavishy",
+     "wave",
+     "Thank you, thank you. Autographs after the episode."
+    ],
+    [
+     "swapnil",
+     "point",
+     "Papa, any final doctor advice for our audience?"
+    ],
+    [
+     "sanjay",
+     "thumbs",
+     "Yes. Laugh every day. It is the only medicine with no side effects. And I do not even charge for it."
+    ],
+    [
+     "seema",
+     "wave",
+     "And eat your dinner before the episode ends. Cartoon food does not fill real stomachs."
+    ],
+    [
+     "swapnil",
+     "open",
+     "So that is us. The Agrawal family. Same love, same drama..."
+    ],
+    [
+     "swapnil",
+     "thumbs",
+     "...just a little more colourful now. See you in episode two!"
+    ]
+   ]
+  }
+ ],
+ "marks": {
+  "living": {
+   "swapnil": [
+    560,
+    1058,
+    640
+   ],
+   "sanjay": [
+    905,
+    1032,
+    600
+   ],
+   "seema": [
+    1200,
+    1032,
+    590
+   ],
+   "bhavishy": [
+    1520,
+    1058,
+    640
+   ]
+  },
+  "kitchen": {
+   "seema": [
+    430,
+    1058,
+    630
+   ],
+   "swapnil": [
+    830,
+    1058,
+    640
+   ],
+   "sanjay": [
+    1180,
+    1036,
+    600
+   ],
+   "bhavishy": [
+    1540,
+    1058,
+    640
+   ]
+  },
+  "terrace": {
+   "swapnil": [
+    520,
+    1050,
+    630
+   ],
+   "seema": [
+    830,
+    1028,
+    585
+   ],
+   "sanjay": [
+    1130,
+    1028,
+    595
+   ],
+   "bhavishy": [
+    1470,
+    1050,
+    635
+   ]
+  }
+ }
+}

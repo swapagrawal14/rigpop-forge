@@ -192,6 +192,20 @@ writes them down and generates them for you.
   placements, cast voices), and a starter `script.md` with lines tagged
   by character id, ready for Talk's duet stage or Agents.
 
+## What's new in v0.7
+
+- **`talk.poseAnchors`** — per-pose mouth/eye centres in the manifest
+  (SPEC.md). The base-pose patch rects drift on gesture poses because the
+  head moves; anchors are how a renderer lip-syncs *every* pose. The four
+  Agrawal family packs carry hand-verified anchors, and their pose art is
+  normalised to one figure height per character.
+- **`tools/cartoon-render`** — an optional Python renderer that turns
+  packs into a full cartoon episode: staged scenes, a moving camera
+  (close-ups, two-shots, push-ins, pans), walking entrances, gestures that
+  change mid-sentence at phrase boundaries, reaction poses, and
+  audio-envelope lip-sync. Worked example included: the family pilot
+  *The Agrawal Family — Episode 1* (3 scenes, 28 shots, 2:51).
+
 ## Roadmap
 
 - **Later — scene scripts to Agents:** duet bundles rendered straight to
