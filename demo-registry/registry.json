@@ -1,8 +1,31 @@
 {
   "format": "rigpop-registry",
   "version": 1,
-  "builtAt": "2026-11-03T04:54:05.065Z",
+  "builtAt": "2026-11-03T05:04:07.585Z",
   "packs": [
+    {
+      "id": "bunty",
+      "name": "Bunty the Bot",
+      "author": "Swapnil Agrawal",
+      "license": "MIT",
+      "spec": 1,
+      "canvas": {
+        "w": 720,
+        "h": 936
+      },
+      "voice": "en-IN-PrabhatNeural",
+      "poses": [
+        "wave",
+        "point",
+        "open",
+        "thumbs"
+      ],
+      "hasMotion": false,
+      "files": 16,
+      "bytes": 105596,
+      "pack": "packs/bunty.rigpop-pack",
+      "preview": "packs/bunty.rigpop-pack/talk/base.png"
+    },
     {
       "id": "kdswapnil",
       "name": "Doodle Swapnil",
@@ -25,6 +48,52 @@
       "bytes": 210908,
       "pack": "packs/kdswapnil.rigpop-pack",
       "preview": "packs/kdswapnil.rigpop-pack/talk/base.png"
+    },
+    {
+      "id": "mocha",
+      "name": "Mocha the Cat",
+      "author": "Swapnil Agrawal",
+      "license": "MIT",
+      "spec": 1,
+      "canvas": {
+        "w": 720,
+        "h": 936
+      },
+      "voice": "en-IN-AashiNeural",
+      "poses": [
+        "wave",
+        "point",
+        "open",
+        "thumbs"
+      ],
+      "hasMotion": false,
+      "files": 16,
+      "bytes": 130900,
+      "pack": "packs/mocha.rigpop-pack",
+      "preview": "packs/mocha.rigpop-pack/talk/base.png"
+    },
+    {
+      "id": "pia",
+      "name": "Pia the Pineapple",
+      "author": "Swapnil Agrawal",
+      "license": "MIT",
+      "spec": 1,
+      "canvas": {
+        "w": 720,
+        "h": 936
+      },
+      "voice": "en-IN-NeerjaNeural",
+      "poses": [
+        "wave",
+        "point",
+        "open",
+        "thumbs"
+      ],
+      "hasMotion": false,
+      "files": 16,
+      "bytes": 191799,
+      "pack": "packs/pia.rigpop-pack",
+      "preview": "packs/pia.rigpop-pack/talk/base.png"
     }
   ]
 }

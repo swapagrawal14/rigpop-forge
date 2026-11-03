@@ -1,0 +1,89 @@
+{
+  "format": "rigpop-pack",
+  "spec": 1,
+  "id": "pia",
+  "name": "Pia the Pineapple",
+  "packedAt": "2026-11-03T05:04:07.068Z",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 491,
+      "sha256": "ce04f2a60286ef7adbf3c5ea74083299058e17187ec8092de394382345776d31"
+    },
+    {
+      "path": "character.rigpop.json",
+      "bytes": 1165,
+      "sha256": "6bad39e92c593d00d3ca7778e757cbdb7d8a0fd32ae2911b80ff0029ad729a2f"
+    },
+    {
+      "path": "sheets/sheets.json",
+      "bytes": 738,
+      "sha256": "080cf0277e5ef45a449fad22e98da069f7eb7a5c4c1b43bd84c8cc98c8164b8a"
+    },
+    {
+      "path": "states/A.png",
+      "bytes": 20874,
+      "sha256": "9a654a89e18e330e48d7335a72fab23d04cc950e05156980e6608e6f8624734c"
+    },
+    {
+      "path": "states/E.png",
+      "bytes": 20563,
+      "sha256": "03e6eceb8f242f42294f60b09a29327a943fd4a9882d8d546f5e080c3c75d778"
+    },
+    {
+      "path": "states/O.png",
+      "bytes": 20628,
+      "sha256": "7db245ab031ef6bae8ef0742a78d63cc432a09909b52d0a09a027d628c8266c3"
+    },
+    {
+      "path": "states/blink.png",
+      "bytes": 20015,
+      "sha256": "f2f7f1e6f2f44a33eb1bae7f222cd1509054029c1385b81f09e47d517a286f9c"
+    },
+    {
+      "path": "talk/A.png",
+      "bytes": 586,
+      "sha256": "2370191513d441357184efed9b0f9d7da101b5eaff2cd0156b664bd52a3d9ac0"
+    },
+    {
+      "path": "talk/E.png",
+      "bytes": 342,
+      "sha256": "36049477b9cc19d1a52da6988cb555e9f00c8a41543f5533347c65b4c5df4ee9"
+    },
+    {
+      "path": "talk/O.png",
+      "bytes": 469,
+      "sha256": "383becf00e0f4775a536310e1c9b0faa857542c69655604e713097c7302e5716"
+    },
+    {
+      "path": "talk/base.png",
+      "bytes": 20620,
+      "sha256": "7c095394566e42fc57ab5e31349239da9532a6634e37087f474bc3f51ec36ef7"
+    },
+    {
+      "path": "talk/blink.png",
+      "bytes": 1262,
+      "sha256": "81c4ec817b727e137a0568db1deabeed5447cce087bc01ee5034114fb6316b07"
+    },
+    {
+      "path": "talk/pose_open.png",
+      "bytes": 20966,
+      "sha256": "fe32a951306752b1652671114ff4fb728e735b475fc3b2dc245d4e8a83c852f4"
+    },
+    {
+      "path": "talk/pose_point.png",
+      "bytes": 20779,
+      "sha256": "46977d77e23e69206562e22c9b8bc310acbc31f017a11fe128de5f89d59f43dd"
+    },
+    {
+      "path": "talk/pose_thumbs.png",
+      "bytes": 21109,
+      "sha256": "2243c62f7032d70ebaf24c3ca288a37543177e4128ceb3f84c570c8ebe2de7f7"
+    },
+    {
+      "path": "talk/pose_wave.png",
+      "bytes": 21192,
+      "sha256": "d7ca53f4f0cc8aa1cbb5595d6f0802d92718a28ff30c89b5d660f0faa377e72f"
+    }
+  ]
+}

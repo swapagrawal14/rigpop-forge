@@ -1,0 +1,62 @@
+{
+  "spec": 1,
+  "id": "pia",
+  "name": "Pia the Pineapple",
+  "author": "Swapnil Agrawal",
+  "license": "MIT",
+  "talk": {
+    "canvas": {
+      "w": 720,
+      "h": 936
+    },
+    "base": "talk/base.png",
+    "files": {
+      "A": "talk/A.png",
+      "O": "talk/O.png",
+      "E": "talk/E.png",
+      "blink": "talk/blink.png"
+    },
+    "patches": {
+      "A": {
+        "x": 321,
+        "y": 592,
+        "w": 79,
+        "h": 59
+      },
+      "O": {
+        "x": 321,
+        "y": 594,
+        "w": 79,
+        "h": 47
+      },
+      "E": {
+        "x": 321,
+        "y": 596,
+        "w": 79,
+        "h": 39
+      },
+      "blink": {
+        "x": 251,
+        "y": 458,
+        "w": 219,
+        "h": 85
+      }
+    },
+    "poses": {
+      "wave": "talk/pose_wave.png",
+      "point": "talk/pose_point.png",
+      "open": "talk/pose_open.png",
+      "thumbs": "talk/pose_thumbs.png"
+    }
+  },
+  "voice": {
+    "engine": "edge-tts",
+    "id": "en-IN-NeerjaNeural",
+    "preset": "neerjaCalm"
+  },
+  "style": {
+    "bible": "cheerful pineapple girl with leafy hair and crosshatch skin, bold outlines, flat colours",
+    "palette": [],
+    "outfit": ""
+  }
+}

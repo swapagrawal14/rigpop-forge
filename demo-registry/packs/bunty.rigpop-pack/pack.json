@@ -1,0 +1,89 @@
+{
+  "format": "rigpop-pack",
+  "spec": 1,
+  "id": "bunty",
+  "name": "Bunty the Bot",
+  "packedAt": "2026-11-03T05:04:06.453Z",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 487,
+      "sha256": "f73674e6901b3dbd64f3fc8d23c9fcbb013b2a25ca6760bf0e9f99c107568bee"
+    },
+    {
+      "path": "character.rigpop.json",
+      "bytes": 1167,
+      "sha256": "269bd546181932d808a8ea85790f254ec96bcf825a443cf760d2ce72e845733d"
+    },
+    {
+      "path": "sheets/sheets.json",
+      "bytes": 738,
+      "sha256": "080cf0277e5ef45a449fad22e98da069f7eb7a5c4c1b43bd84c8cc98c8164b8a"
+    },
+    {
+      "path": "states/A.png",
+      "bytes": 11489,
+      "sha256": "c737dece0c846c47d77e64307ebae147f05f6501d9c81b4218a0999c8d23defd"
+    },
+    {
+      "path": "states/E.png",
+      "bytes": 11224,
+      "sha256": "a396d8d8224036d3a3db3124031a997fa945af0fffc01803df5ab50a3b96f1c3"
+    },
+    {
+      "path": "states/O.png",
+      "bytes": 11301,
+      "sha256": "f1f15cda79c612619b66f348f5adaf8496300c21da0ffbe6da2b4d9d510024f9"
+    },
+    {
+      "path": "states/blink.png",
+      "bytes": 10669,
+      "sha256": "5458d674205cb9e455f131a627cefb8f7503e990a67783789f9bead881b1d434"
+    },
+    {
+      "path": "talk/A.png",
+      "bytes": 430,
+      "sha256": "96825a7ceae3895af19b24ac45b7606935f653a44ba3e0f41d6ebb2c0ca9e534"
+    },
+    {
+      "path": "talk/E.png",
+      "bytes": 257,
+      "sha256": "50b68bae653d04a70c14cb3737e83da0d29639ff3edd8dd8011080f699fe823a"
+    },
+    {
+      "path": "talk/O.png",
+      "bytes": 310,
+      "sha256": "f0d450e0b2d554b03715590359808edffaadd832559aacb6da126f6a48bc841b"
+    },
+    {
+      "path": "talk/base.png",
+      "bytes": 11241,
+      "sha256": "4d01df52a5d90e9c3a3df3406a7eaa4ecad58bced95d02dde124e3fd4ae41dd7"
+    },
+    {
+      "path": "talk/blink.png",
+      "bytes": 494,
+      "sha256": "42fbce60034eee788361569386622c39984c823f16f5e548c9c8f9d92ed2a66b"
+    },
+    {
+      "path": "talk/pose_open.png",
+      "bytes": 12230,
+      "sha256": "26c83413cb11b17fec018add66b2855b0db166b729ad3fdeb3381be0f181f167"
+    },
+    {
+      "path": "talk/pose_point.png",
+      "bytes": 10776,
+      "sha256": "fdbe663970204b535afc371be7cd2daccbb8d50fd6e456ef5b36ae5c7af56a92"
+    },
+    {
+      "path": "talk/pose_thumbs.png",
+      "bytes": 11135,
+      "sha256": "91ba8c56b5c65192ed1ded5d04666e1b4480fc5d08491c8e9d886720e5bfc9b6"
+    },
+    {
+      "path": "talk/pose_wave.png",
+      "bytes": 11648,
+      "sha256": "702843982e96e8896ef89490c1fd6b2e1820e2e8488ca6f6eebfef3ed2efdd41"
+    }
+  ]
+}

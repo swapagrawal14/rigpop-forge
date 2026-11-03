@@ -183,7 +183,7 @@ try {
       const entries = buildRegistry(resolve(pos[1]));
       console.log(`✓ registry rebuilt: ${entries.length} pack(s) — see registry.json + index.html in ${resolve(pos[1])}`);
     } else if (pos[0] === 'site' && pos[1] && flags.out) {
-      const entries = buildSite(resolve(pos[1]), resolve(flags.out));
+      const entries = buildSite(resolve(pos[1]), resolve(flags.out), { siteUrl: flags.url || '' });
       console.log(`✓ deployable site in ${resolve(flags.out)}: ${entries.length} pack(s), gallery + catalog + .github/workflows/pages.yml — see DEPLOY.md there`);
     } else fail('usage: rigpop-forge registry build <dir> | registry site <dir> --out <siteDir>');
   }

@@ -1,0 +1,43 @@
+{
+  "sheets": [
+    {
+      "file": "sheets/head.png",
+      "labels": [
+        "head.front",
+        "head.34",
+        "accessory"
+      ]
+    },
+    {
+      "file": "sheets/body.png",
+      "labels": [
+        "torso",
+        "arm.upper",
+        "arm.fore",
+        "hand.open",
+        "hand.fist",
+        "hand.point",
+        "leg.thigh",
+        "leg.shin",
+        "foot"
+      ]
+    },
+    {
+      "file": "sheets/face.png",
+      "labels": [
+        "eyes.open*2",
+        "eyes.half*2",
+        "eyes.closed*2",
+        "eyes.happy*2",
+        "mouth.A",
+        "mouth.E",
+        "mouth.O",
+        "mouth.M",
+        "mouth.smile",
+        "mouth.laugh",
+        "mouth.frown",
+        "mouth.smirk"
+      ]
+    }
+  ]
+}
