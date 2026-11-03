@@ -1,0 +1,64 @@
+{
+  "format": "rigpop-pack",
+  "spec": 1,
+  "id": "swapnil",
+  "name": "Swapnil Agrawal",
+  "packedAt": "2026-11-03T06:24:35.502Z",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 489,
+      "sha256": "42f38cd82a5f096fe22de51be313fa06627b122c1c285532d7ca1333f7a74b1b"
+    },
+    {
+      "path": "character.rigpop.json",
+      "bytes": 1187,
+      "sha256": "c992da31aebb107b75586ca98cd3096827bad5489a082eeb9bc9ff423baf264d"
+    },
+    {
+      "path": "talk/A.png",
+      "bytes": 4771,
+      "sha256": "f3496b3debefadd6ecc68644052fbd05d881d45733ab10afd68916f6d0936bb9"
+    },
+    {
+      "path": "talk/E.png",
+      "bytes": 5379,
+      "sha256": "8bcd7f91b500ec8a0eb812c44ce774dbd4096eee9a1b91621ebcafef576b7df0"
+    },
+    {
+      "path": "talk/O.png",
+      "bytes": 4519,
+      "sha256": "f54f320b4fb96347159fef9a4b5e8b3f8e06b59e7c3099a4cf699fd7e4681c60"
+    },
+    {
+      "path": "talk/base.png",
+      "bytes": 718465,
+      "sha256": "5d955f556baf6b622826f2ebc8f0a17ec9b9da02de6d50d7952426225ffbdf5a"
+    },
+    {
+      "path": "talk/blink.png",
+      "bytes": 2382,
+      "sha256": "4e2cf8f81932fa351d7c5ca31b51fda4583150eef710cc086deadb22f9cf137a"
+    },
+    {
+      "path": "talk/pose_open.png",
+      "bytes": 495694,
+      "sha256": "49eca8cc0217b5774392791d8ff8b72d136e659642c18e1eabae41c2d1bedc7c"
+    },
+    {
+      "path": "talk/pose_point.png",
+      "bytes": 562502,
+      "sha256": "000ed4b26c780f2c700c7a9bf1baa1982ebfd9df1ebcf6c5555d14b08ca9f401"
+    },
+    {
+      "path": "talk/pose_thumbs.png",
+      "bytes": 486779,
+      "sha256": "9ba32942e5ed1f0f52c24f0aa931e35831e6b4a478815bb7337767d3d4c21050"
+    },
+    {
+      "path": "talk/pose_wave.png",
+      "bytes": 705826,
+      "sha256": "c26a3baf19a2bc66856172b4d574688a79597b400d554f078384db33e7a232cf"
+    }
+  ]
+}

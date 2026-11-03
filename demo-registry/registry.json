@@ -1,7 +1,7 @@
 {
   "format": "rigpop-registry",
   "version": 1,
-  "builtAt": "2026-11-03T06:18:55.117Z",
+  "builtAt": "2026-11-03T06:24:35.599Z",
   "packs": [
     {
       "id": "bhavishy",
@@ -347,6 +347,29 @@
       "bytes": 2537369,
       "pack": "packs/static.rigpop-pack",
       "preview": "packs/static.rigpop-pack/talk/base.png"
+    },
+    {
+      "id": "swapnil",
+      "name": "Swapnil Agrawal",
+      "author": "Swapnil Agrawal",
+      "license": "MIT",
+      "spec": 1,
+      "canvas": {
+        "w": 720,
+        "h": 936
+      },
+      "voice": "en-IN-NeerjaExpressiveNeural",
+      "poses": [
+        "wave",
+        "point",
+        "open",
+        "thumbs"
+      ],
+      "hasMotion": false,
+      "files": 11,
+      "bytes": 2987993,
+      "pack": "packs/swapnil.rigpop-pack",
+      "preview": "packs/swapnil.rigpop-pack/talk/base.png"
     }
   ]
 }
