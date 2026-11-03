@@ -1,0 +1,64 @@
+{
+  "format": "rigpop-pack",
+  "spec": 1,
+  "id": "kiko",
+  "name": "Kiko the Cloud Shepherd",
+  "packedAt": "2026-11-03T05:24:15.471Z",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 497,
+      "sha256": "32dec149c253b5cde1631253ce64cfb4a8cc0878d5fd982d4339c6a067cca147"
+    },
+    {
+      "path": "character.rigpop.json",
+      "bytes": 1151,
+      "sha256": "6e648f092bdea38bf5da74815626a17fe82031b23272f7e8ba99e0af65d4b55e"
+    },
+    {
+      "path": "talk/A.png",
+      "bytes": 5861,
+      "sha256": "56e730012cbb7677225eca7848864f8fe737bf34e6d1a36c77cc24788b22da5e"
+    },
+    {
+      "path": "talk/E.png",
+      "bytes": 6506,
+      "sha256": "bbc77b22fb8dd47f17868b63022f1a88b5449e1d40eef179a1145af88f5d8191"
+    },
+    {
+      "path": "talk/O.png",
+      "bytes": 4371,
+      "sha256": "97a68e5b3bf4df472ba2196f5ea69b3303c743cd5d99e3fcbfb357534e4064fb"
+    },
+    {
+      "path": "talk/base.png",
+      "bytes": 516030,
+      "sha256": "8cf327dfac156c988ab5ecb3662ecf915d9306c5eeddaf6806f313981ce488eb"
+    },
+    {
+      "path": "talk/blink.png",
+      "bytes": 3250,
+      "sha256": "320388e5c10c335a1183c828fde2cd691247a0d03e227d2d8edaa36cb80ca6c3"
+    },
+    {
+      "path": "talk/pose_open.png",
+      "bytes": 448165,
+      "sha256": "97424b11171d9e918e92483754e0c2ecddf0645a4196f3294ff7fdd054f140ad"
+    },
+    {
+      "path": "talk/pose_point.png",
+      "bytes": 560693,
+      "sha256": "cfb8247a1545ba727469d55f0895cf47552e44911cb1b28632b259edf96542d8"
+    },
+    {
+      "path": "talk/pose_thumbs.png",
+      "bytes": 552423,
+      "sha256": "4ff04b6de03a2a8189f861474e1de815195d9e9572bab7d3169cb24fbca1d1aa"
+    },
+    {
+      "path": "talk/pose_wave.png",
+      "bytes": 571414,
+      "sha256": "da9856ef6ab2fab5ccc88c6657a7058c86a3a162203568a99bf2d2033235b3cd"
+    }
+  ]
+}

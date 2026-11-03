@@ -1,0 +1,64 @@
+{
+  "format": "rigpop-pack",
+  "spec": 1,
+  "id": "rafi",
+  "name": "Rafi the Rickshaw Poet",
+  "packedAt": "2026-11-03T05:24:15.883Z",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 496,
+      "sha256": "10657ff60130b85b4cf3be56ad38514107fbb5a25c520649afa2587a10f67899"
+    },
+    {
+      "path": "character.rigpop.json",
+      "bytes": 1166,
+      "sha256": "9304560e6b92320c332e1a2f9dc60d21ec62b7902281ccad93cfad1bb76b603a"
+    },
+    {
+      "path": "talk/A.png",
+      "bytes": 2895,
+      "sha256": "2ed48ea2b23af7acb2168381b444b12bc1cef532d1f2233b9c49d1d00d0dd5d9"
+    },
+    {
+      "path": "talk/E.png",
+      "bytes": 3499,
+      "sha256": "1ce23866e4ae42d3b8e8ec93fcfe1d138f08308462a09ec06fba8576059cf4ec"
+    },
+    {
+      "path": "talk/O.png",
+      "bytes": 2643,
+      "sha256": "d7e714cd69790c22a807a901bb174ac2b09581328839afa5f5cf02822aac6e13"
+    },
+    {
+      "path": "talk/base.png",
+      "bytes": 305773,
+      "sha256": "69bb5b57db16f1a2d8c59aa56fa3630ff0a516b90dd7b106cec138a30a70d824"
+    },
+    {
+      "path": "talk/blink.png",
+      "bytes": 2390,
+      "sha256": "7d294e99aab6d76d43bb3e372744ff05014072ac3979ca3866025ff325019d32"
+    },
+    {
+      "path": "talk/pose_open.png",
+      "bytes": 231532,
+      "sha256": "323f51799af47ba07f0a318b23b7a530455c66d583a6212d97294b9ffca0229e"
+    },
+    {
+      "path": "talk/pose_point.png",
+      "bytes": 322895,
+      "sha256": "bcbd0ba4f98c02dba555bb00f21925918da3f9004b44d8654456a7a049ce0f66"
+    },
+    {
+      "path": "talk/pose_thumbs.png",
+      "bytes": 320628,
+      "sha256": "daeb4f0960bbf59dfbd47680d8b7bea484626a77a4387e5bb7d64ac213893373"
+    },
+    {
+      "path": "talk/pose_wave.png",
+      "bytes": 331273,
+      "sha256": "3bf13f8c8aff41a3cdb12285a4ddabfd9edcf0f394b1946c9ed136234f6ddc4e"
+    }
+  ]
+}

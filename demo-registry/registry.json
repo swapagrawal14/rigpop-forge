@@ -1,7 +1,7 @@
 {
   "format": "rigpop-registry",
   "version": 1,
-  "builtAt": "2026-11-03T05:11:34.858Z",
+  "builtAt": "2026-11-03T05:24:16.084Z",
   "packs": [
     {
       "id": "bunty",
@@ -50,6 +50,29 @@
       "preview": "packs/kdswapnil.rigpop-pack/talk/base.png"
     },
     {
+      "id": "kiko",
+      "name": "Kiko the Cloud Shepherd",
+      "author": "Swapnil Agrawal",
+      "license": "MIT",
+      "spec": 1,
+      "canvas": {
+        "w": 720,
+        "h": 936
+      },
+      "voice": "en-GB-RyanNeural",
+      "poses": [
+        "wave",
+        "point",
+        "open",
+        "thumbs"
+      ],
+      "hasMotion": false,
+      "files": 11,
+      "bytes": 2670361,
+      "pack": "packs/kiko.rigpop-pack",
+      "preview": "packs/kiko.rigpop-pack/talk/base.png"
+    },
+    {
       "id": "mocha",
       "name": "Mocha the Cat",
       "author": "Swapnil Agrawal",
@@ -94,6 +117,52 @@
       "bytes": 1654523,
       "pack": "packs/pia.rigpop-pack",
       "preview": "packs/pia.rigpop-pack/talk/base.png"
+    },
+    {
+      "id": "rafi",
+      "name": "Rafi the Rickshaw Poet",
+      "author": "Swapnil Agrawal",
+      "license": "MIT",
+      "spec": 1,
+      "canvas": {
+        "w": 720,
+        "h": 936
+      },
+      "voice": "en-US-AndrewMultilingualNeural",
+      "poses": [
+        "wave",
+        "point",
+        "open",
+        "thumbs"
+      ],
+      "hasMotion": false,
+      "files": 11,
+      "bytes": 1525190,
+      "pack": "packs/rafi.rigpop-pack",
+      "preview": "packs/rafi.rigpop-pack/talk/base.png"
+    },
+    {
+      "id": "solana",
+      "name": "Solana the Sun-Chaser",
+      "author": "Swapnil Agrawal",
+      "license": "MIT",
+      "spec": 1,
+      "canvas": {
+        "w": 720,
+        "h": 936
+      },
+      "voice": "en-GB-SoniaNeural",
+      "poses": [
+        "wave",
+        "point",
+        "open",
+        "thumbs"
+      ],
+      "hasMotion": false,
+      "files": 11,
+      "bytes": 1164689,
+      "pack": "packs/solana.rigpop-pack",
+      "preview": "packs/solana.rigpop-pack/talk/base.png"
     }
   ]
 }

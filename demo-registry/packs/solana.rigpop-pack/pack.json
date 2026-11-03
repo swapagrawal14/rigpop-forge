@@ -1,0 +1,64 @@
+{
+  "format": "rigpop-pack",
+  "spec": 1,
+  "id": "solana",
+  "name": "Solana the Sun-Chaser",
+  "packedAt": "2026-11-03T05:24:15.988Z",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 495,
+      "sha256": "3c1d291809c088d8da83afc20e19c40a5d5f48e0e92374cdd5f1b794a7489bd8"
+    },
+    {
+      "path": "character.rigpop.json",
+      "bytes": 1179,
+      "sha256": "eddea2c77d209881116cc65d2db576f502ba35fbee47536bd905db1fd7e1a35a"
+    },
+    {
+      "path": "talk/A.png",
+      "bytes": 2119,
+      "sha256": "8e49bf9dc0011b03130a431836c45df6acc9a3855fa1cbd1747618d0c57f76c1"
+    },
+    {
+      "path": "talk/E.png",
+      "bytes": 3474,
+      "sha256": "cdb6fd9e5e85fcc8682d24fd6969d758a9500847b6f3f8659d34979fbab81b0c"
+    },
+    {
+      "path": "talk/O.png",
+      "bytes": 1634,
+      "sha256": "f4e424aa7ed7b5a5e5d3d03e9ae0628741af76b2bd1e49e46722fe85dd92a296"
+    },
+    {
+      "path": "talk/base.png",
+      "bytes": 234353,
+      "sha256": "858d10811a40a884673d3947cad6adcc4156d4acfd55b0a6505f88ba1c51bb12"
+    },
+    {
+      "path": "talk/blink.png",
+      "bytes": 2229,
+      "sha256": "1b6db43ca2604468d2080fadb8c8eef3a45ffed4beb3f61d4e31fd58bf8cd112"
+    },
+    {
+      "path": "talk/pose_open.png",
+      "bytes": 194050,
+      "sha256": "51c684bcd52f523bddd587e0d4f9c13c0da826d11e68996a43d8c86b74e5bce3"
+    },
+    {
+      "path": "talk/pose_point.png",
+      "bytes": 240707,
+      "sha256": "c39eebb7c8ae80af567106c5e15e0743d2d19db05069ef5840de2788895086d8"
+    },
+    {
+      "path": "talk/pose_thumbs.png",
+      "bytes": 242273,
+      "sha256": "ef575e0c6c36767cdfadac741d32e2bf320791cb3b484353b3900b3f5da8ccae"
+    },
+    {
+      "path": "talk/pose_wave.png",
+      "bytes": 242176,
+      "sha256": "945658885ec6efd12a4382573dbd71d060bcda7bdc0eeb7358a1ae46dbf48f6e"
+    }
+  ]
+}
