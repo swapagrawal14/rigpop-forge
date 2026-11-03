@@ -7,6 +7,12 @@
 **v0.6 is here:** characters get cast — voice presets (`voice`) and
 two-character scenes (`duet`). Still zero dependencies.
 
+📦 **Live demo registry:** this repo ships one in `demo-registry/`
+(Doodle Swapnil, fetchable). Once Pages is enabled (Settings → Pages →
+GitHub Actions — see `demo-registry/DEPLOY.md`) it serves at
+[swapagrawal14.github.io/rigpop-forge](https://swapagrawal14.github.io/rigpop-forge/)
+and `rigpop-forge fetch https://swapagrawal14.github.io/rigpop-forge/ kdswapnil --out ./characters` just works.
+
 **The character factory for the Rigpop family.** Engines were never the
 problem — talking busts, agent-rendered videos, full cartoons, ink restyles,
 living websites all exist. Making a *character* was the problem: manual in
@@ -188,8 +194,6 @@ writes them down and generates them for you.
 
 ## Roadmap
 
-- **Later — hosted demo registry:** this repo's example characters,
-  published as a live Pages registry (needs a home repo — your call).
 - **Later — scene scripts to Agents:** duet bundles rendered straight to
   voiced MP4 by rigpop-agents.
 

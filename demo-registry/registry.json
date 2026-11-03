@@ -1,0 +1,30 @@
+{
+  "format": "rigpop-registry",
+  "version": 1,
+  "builtAt": "2026-11-03T04:54:05.065Z",
+  "packs": [
+    {
+      "id": "kdswapnil",
+      "name": "Doodle Swapnil",
+      "author": "Swapnil Agrawal",
+      "license": "MIT",
+      "spec": 1,
+      "canvas": {
+        "w": 720,
+        "h": 936
+      },
+      "voice": "en-IN-NeerjaExpressiveNeural",
+      "poses": [
+        "wave",
+        "point",
+        "open",
+        "thumbs"
+      ],
+      "hasMotion": false,
+      "files": 10,
+      "bytes": 210908,
+      "pack": "packs/kdswapnil.rigpop-pack",
+      "preview": "packs/kdswapnil.rigpop-pack/talk/base.png"
+    }
+  ]
+}
