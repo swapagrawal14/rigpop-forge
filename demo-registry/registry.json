@@ -1,7 +1,7 @@
 {
   "format": "rigpop-registry",
   "version": 1,
-  "builtAt": "2026-11-03T05:24:16.084Z",
+  "builtAt": "2026-11-03T05:29:08.078Z",
   "packs": [
     {
       "id": "bunty",
@@ -71,6 +71,29 @@
       "bytes": 2670361,
       "pack": "packs/kiko.rigpop-pack",
       "preview": "packs/kiko.rigpop-pack/talk/base.png"
+    },
+    {
+      "id": "mira",
+      "name": "Mira the Moon Gardener",
+      "author": "Swapnil Agrawal",
+      "license": "MIT",
+      "spec": 1,
+      "canvas": {
+        "w": 720,
+        "h": 936
+      },
+      "voice": "en-US-AvaMultilingualNeural",
+      "poses": [
+        "wave",
+        "point",
+        "open",
+        "thumbs"
+      ],
+      "hasMotion": false,
+      "files": 11,
+      "bytes": 1953098,
+      "pack": "packs/mira.rigpop-pack",
+      "preview": "packs/mira.rigpop-pack/talk/base.png"
     },
     {
       "id": "mocha",

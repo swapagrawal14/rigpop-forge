@@ -1,0 +1,64 @@
+{
+  "format": "rigpop-pack",
+  "spec": 1,
+  "id": "mira",
+  "name": "Mira the Moon Gardener",
+  "packedAt": "2026-11-03T05:29:07.499Z",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 496,
+      "sha256": "82a9668a66afe5ffa48387374d4296787303b0916e6c0286a5cb2ccfc2399a5a"
+    },
+    {
+      "path": "character.rigpop.json",
+      "bytes": 1169,
+      "sha256": "759228b2d90cb0ea37a9eff8978ff1167443e7d57f8e6f2bca55e82ddfe0ca65"
+    },
+    {
+      "path": "talk/A.png",
+      "bytes": 3351,
+      "sha256": "b664e611f42dc2163d67ae1f5c8e6e175850f15a2ef28aa7ac2be7848f25591a"
+    },
+    {
+      "path": "talk/E.png",
+      "bytes": 3575,
+      "sha256": "2bbdb04603eb4252a9390ac94b3d93732f3006caff9fc6032ef9c89baad0c60b"
+    },
+    {
+      "path": "talk/O.png",
+      "bytes": 3106,
+      "sha256": "d12af47b82433a570da4c53a030087c0bae3aed3714166695e4d7b50e8128347"
+    },
+    {
+      "path": "talk/base.png",
+      "bytes": 390473,
+      "sha256": "24d51de7dfa9677d24b4223a166f592a3c6088b9207b741aad51fb885dbe8300"
+    },
+    {
+      "path": "talk/blink.png",
+      "bytes": 845,
+      "sha256": "6c650b6042fe79fd71d32ce0447cfe9065ee8143bad9f839fcd281c5b389df8c"
+    },
+    {
+      "path": "talk/pose_open.png",
+      "bytes": 326836,
+      "sha256": "d603a05b969435573d5b9c73c9c401d5a42a3945e30ddcd838e7ea750fb901d5"
+    },
+    {
+      "path": "talk/pose_point.png",
+      "bytes": 422730,
+      "sha256": "1136e13fddc12fa3e07586b2b1dcf704e89d28f0c36609eb3486947c89b2f3b6"
+    },
+    {
+      "path": "talk/pose_thumbs.png",
+      "bytes": 393229,
+      "sha256": "ade8cd0a4c8606abb5d7d6dd1b054026979996369f4c528daed37779fc558ea9"
+    },
+    {
+      "path": "talk/pose_wave.png",
+      "bytes": 407288,
+      "sha256": "f7b3b67302ce27508cde3987f6cbc20e047c29f1e06aabe4365e5f2f0c29bbd4"
+    }
+  ]
+}
