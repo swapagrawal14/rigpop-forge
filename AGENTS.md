@@ -44,6 +44,8 @@ src/fetch.mjs         registry -> local pack, sha256-verified per file
 src/tune.mjs          rig anchor list/set + rig-preview.png contact sheet
 src/normalise.mjs     pose-pack keys -> one height + floor line
 src/refine.mjs        sleeves painted into torso; rubber-hose limb strips
+src/voices.mjs        Edge TTS preset roster + casting
+src/duet.mjs          two packs -> duet scene bundle
 examples/             real, QA-passing packs — keep them passing
 test/                 node --test suites; run before every push
 ```

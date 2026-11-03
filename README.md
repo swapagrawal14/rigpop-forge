@@ -2,11 +2,10 @@
 
 ![rigpop-forge — one drawing in, a character pack out](docs/assets/hero.png)
 
-![Node >= 20](https://img.shields.io/badge/node-%3E%3D20-339933) ![spec v1](https://img.shields.io/badge/character%20spec-v1-FF4D8D) ![tests](https://img.shields.io/badge/tests-22%20passing-00A676) ![zero dependencies](https://img.shields.io/badge/dependencies-0-FFD23F) ![MIT](https://img.shields.io/badge/license-MIT-blue)
+![Node >= 20](https://img.shields.io/badge/node-%3E%3D20-339933) ![spec v1](https://img.shields.io/badge/character%20spec-v1-FF4D8D) ![tests](https://img.shields.io/badge/tests-24%20passing-00A676) ![zero dependencies](https://img.shields.io/badge/dependencies-0-FFD23F) ![MIT](https://img.shields.io/badge/license-MIT-blue)
 
-**v0.5 is here:** Motion's painted tricks arrive — sleeves in the torso,
-rubber-hose limb strips — and registries deploy to GitHub Pages in one
-command. Still zero dependencies.
+**v0.6 is here:** characters get cast — voice presets (`voice`) and
+two-character scenes (`duet`). Still zero dependencies.
 
 **The character factory for the Rigpop family.** Engines were never the
 problem — talking busts, agent-rendered videos, full cartoons, ink restyles,
@@ -92,6 +91,8 @@ node bin/rigpop-forge.js import-talk ../rigpop-talk/characters kdswapnil \
 | `sleeves <pack>` | **v0.5** — paint the arm sleeve caps into the torso at the shoulders, so joints never show a gap |
 | `hose <pack>` | **v0.5** — rubber-hose strips for limb parts: every row resampled to one median width |
 | `registry site <dir> --out <site>` | **v0.5** — deployable static site + GitHub Pages workflow for a registry |
+| `voice <pack> --preset neerja` | **v0.6** — cast a voice from the Edge preset roster (`voice --list`) |
+| `duet <packA> <packB> --out <dir>` | **v0.6** — two packs → one scene: merged cast, stage placements, starter script |
 
 ## The sheet prompts
 
@@ -173,12 +174,24 @@ writes them down and generates them for you.
   and packs copied into a deployable folder with a ready GitHub Pages
   workflow and a `DEPLOY.md`. Host it, and `fetch` works against the URL.
 
+## What's new in v0.6
+
+- **`voice`** — casting instead of memorising voice ids: a preset roster
+  (neerja, aashi, prabhat, ava, andrew, sonia, ryan…) that writes
+  `{engine, id, preset}` into the manifest. Doodle Swapnil's Neerja is
+  literally preset #1.
+- **`duet`** — two QA-passed packs become a scene: both characters
+  exported into one `characters/` folder with a merged index, a
+  `duet.json` stage (common height, one floor line, left/right
+  placements, cast voices), and a starter `script.md` with lines tagged
+  by character id, ready for Talk's duet stage or Agents.
+
 ## Roadmap
 
-- **v0.6 — duet packs:** two-character Talk scenes from two packs, and
-  voice casting (per-character Edge voice presets in the spec).
 - **Later — hosted demo registry:** this repo's example characters,
-  published as a live Pages registry.
+  published as a live Pages registry (needs a home repo — your call).
+- **Later — scene scripts to Agents:** duet bundles rendered straight to
+  voiced MP4 by rigpop-agents.
 
 ## Tests & visuals
 

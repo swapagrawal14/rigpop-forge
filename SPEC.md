@@ -166,6 +166,27 @@ without the art shearing.
 deployable static site (gallery, catalog, packs) with a GitHub Pages
 workflow at `.github/workflows/pages.yml` and a `DEPLOY.md`.
 
+## Voice casting (v0.6)
+
+`voice.preset` names an entry in Forge's Edge TTS preset roster
+(neerja, neerjaCalm, aashi, prabhat, ava, andrew, sonia, ryan). Casting a
+preset sets `voice = { engine: "edge-tts", id: <voice id>, preset }`.
+Custom voice ids remain valid; the preset is provenance, not a cage.
+
+## Duet bundles (v0.6)
+
+`duet` writes a scene bundle, not a character pack:
+
+```
+<out>/characters/   both characters in talk format + merged characters.json
+<out>/duet.json     { format: "rigpop-duet", spec: 1, stage: {w,h,floor},
+                      cast: [{ id, name, side, x, y, w, h, scale, voice }] }
+<out>/script.md     starter dialogue, lines tagged [character-id]
+```
+
+Placements scale both characters to a common height (880 px on a 960 px
+stage) and align them to one floor line.
+
 ## Versioning
 
 `spec: 1`. Breaking changes bump the integer; exporters refuse nothing —

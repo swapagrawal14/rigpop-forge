@@ -21,6 +21,8 @@ import { tune } from '../src/tune.mjs';
 import { normalisePack } from '../src/normalise.mjs';
 import { makeHose, paintSleeves } from '../src/refine.mjs';
 import { buildSite } from '../src/registry.mjs';
+import { listPresets, setVoicePreset } from '../src/voices.mjs';
+import { buildDuet } from '../src/duet.mjs';
 
 const HELP = `rigpop-forge — one drawing in, a character pack out
 
@@ -65,6 +67,10 @@ const HELP = `rigpop-forge — one drawing in, a character pack out
       Rubber-hose strips for limb parts (parts/<label>.hose.png).
   registry site <dir> --out <siteDir>
       Copy a registry into a deployable static site + Pages workflow.
+  voice <packDir> --preset <name> | --list
+      Cast a character's voice from the Edge TTS preset roster.
+  duet <packA> <packB> --out <dir> [--name "A & B"]
+      Bundle two QA-passed packs into a duet scene (cast + script).
 `;
 
 function args(argv) {
@@ -216,6 +222,25 @@ try {
     const { report } = makeHose(dir);
     for (const line of report) console.log(`  ${line}`);
     console.log(`✓ hose strips written for ${dir}`);
+  }
+
+  else if (cmd === 'voice') {
+    if (flags.list) { for (const line of listPresets()) console.log(`  ${line}`); }
+    else if (flags.preset && pos[0]) {
+      const v = setVoicePreset(resolve(pos[0]), flags.preset);
+      console.log(`✓ cast voice: ${v.preset} = ${v.id}`);
+    } else fail('usage: rigpop-forge voice <packDir> --preset <name> | voice --list');
+  }
+
+  else if (cmd === 'duet') {
+    const [pa, pb] = pos;
+    if (!pa || !pb || !flags.out) fail('usage: rigpop-forge duet <packA> <packB> --out <dir>');
+    for (const p of [pa, pb]) {
+      const q = qaCharacter(resolve(p));
+      if (!q.ok) fail(`pack ${p} does not pass qa — refusing to cast it in a duet (${q.errors[0]})`);
+    }
+    const duet = buildDuet(resolve(pa), resolve(pb), resolve(flags.out), { name: flags.name || null });
+    console.log(`✓ duet "${duet.name}": stage ${duet.stage.w}x${duet.stage.h}, cast ${duet.cast.map((c) => c.id).join(' + ')} -> ${resolve(flags.out)}`);
   }
 
   else if (cmd === 'pack') {
