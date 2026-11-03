@@ -1,7 +1,7 @@
 {
   "format": "rigpop-registry",
   "version": 1,
-  "builtAt": "2026-11-03T05:04:07.585Z",
+  "builtAt": "2026-11-03T05:11:34.858Z",
   "packs": [
     {
       "id": "bunty",
@@ -21,8 +21,8 @@
         "thumbs"
       ],
       "hasMotion": false,
-      "files": 16,
-      "bytes": 105596,
+      "files": 12,
+      "bytes": 1440904,
       "pack": "packs/bunty.rigpop-pack",
       "preview": "packs/bunty.rigpop-pack/talk/base.png"
     },
@@ -67,8 +67,8 @@
         "thumbs"
       ],
       "hasMotion": false,
-      "files": 16,
-      "bytes": 130900,
+      "files": 12,
+      "bytes": 1804053,
       "pack": "packs/mocha.rigpop-pack",
       "preview": "packs/mocha.rigpop-pack/talk/base.png"
     },
@@ -90,8 +90,8 @@
         "thumbs"
       ],
       "hasMotion": false,
-      "files": 16,
-      "bytes": 191799,
+      "files": 12,
+      "bytes": 1654523,
       "pack": "packs/pia.rigpop-pack",
       "preview": "packs/pia.rigpop-pack/talk/base.png"
     }

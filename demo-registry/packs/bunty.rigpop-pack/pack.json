@@ -3,7 +3,7 @@
   "spec": 1,
   "id": "bunty",
   "name": "Bunty the Bot",
-  "packedAt": "2026-11-03T05:04:06.453Z",
+  "packedAt": "2026-11-03T05:11:33.378Z",
   "files": [
     {
       "path": "README.md",
@@ -12,8 +12,8 @@
     },
     {
       "path": "character.rigpop.json",
-      "bytes": 1167,
-      "sha256": "269bd546181932d808a8ea85790f254ec96bcf825a443cf760d2ce72e845733d"
+      "bytes": 1170,
+      "sha256": "519765134282b3ade74c8e9a4e7ab0c30d8282e582a91b4207cad35cfcfefc6b"
     },
     {
       "path": "sheets/sheets.json",
@@ -21,69 +21,49 @@
       "sha256": "080cf0277e5ef45a449fad22e98da069f7eb7a5c4c1b43bd84c8cc98c8164b8a"
     },
     {
-      "path": "states/A.png",
-      "bytes": 11489,
-      "sha256": "c737dece0c846c47d77e64307ebae147f05f6501d9c81b4218a0999c8d23defd"
-    },
-    {
-      "path": "states/E.png",
-      "bytes": 11224,
-      "sha256": "a396d8d8224036d3a3db3124031a997fa945af0fffc01803df5ab50a3b96f1c3"
-    },
-    {
-      "path": "states/O.png",
-      "bytes": 11301,
-      "sha256": "f1f15cda79c612619b66f348f5adaf8496300c21da0ffbe6da2b4d9d510024f9"
-    },
-    {
-      "path": "states/blink.png",
-      "bytes": 10669,
-      "sha256": "5458d674205cb9e455f131a627cefb8f7503e990a67783789f9bead881b1d434"
-    },
-    {
       "path": "talk/A.png",
-      "bytes": 430,
-      "sha256": "96825a7ceae3895af19b24ac45b7606935f653a44ba3e0f41d6ebb2c0ca9e534"
+      "bytes": 4340,
+      "sha256": "e65310d941c55e37ee229a9d4305495f445334963c83b7538e7cb6399483479e"
     },
     {
       "path": "talk/E.png",
-      "bytes": 257,
-      "sha256": "50b68bae653d04a70c14cb3737e83da0d29639ff3edd8dd8011080f699fe823a"
+      "bytes": 3333,
+      "sha256": "083f359bac050780a96182988588d7b512d8fb2b46c8b2b986162d17c9af4349"
     },
     {
       "path": "talk/O.png",
-      "bytes": 310,
-      "sha256": "f0d450e0b2d554b03715590359808edffaadd832559aacb6da126f6a48bc841b"
+      "bytes": 4309,
+      "sha256": "88a3276e9c9b5b7a4ce1bc65075175cf4517f932845f3eaef46f4f7be8ed2e0b"
     },
     {
       "path": "talk/base.png",
-      "bytes": 11241,
-      "sha256": "4d01df52a5d90e9c3a3df3406a7eaa4ecad58bced95d02dde124e3fd4ae41dd7"
+      "bytes": 337120,
+      "sha256": "5b2afbf840dcb5c8171f61fde7e683cae17c66da4b102a13a5012f9afc0c3dbf"
     },
     {
       "path": "talk/blink.png",
-      "bytes": 494,
-      "sha256": "42fbce60034eee788361569386622c39984c823f16f5e548c9c8f9d92ed2a66b"
+      "bytes": 4359,
+      "sha256": "ee1425df508fd8863db317c319692c14a0db2cb70ee6708342f1bf9fb88d13c3"
     },
     {
       "path": "talk/pose_open.png",
-      "bytes": 12230,
-      "sha256": "26c83413cb11b17fec018add66b2855b0db166b729ad3fdeb3381be0f181f167"
+      "bytes": 230612,
+      "sha256": "a8e9e720e4fe298376f37430280a9c9af194318e61fe61045563e30b70730366"
     },
     {
       "path": "talk/pose_point.png",
-      "bytes": 10776,
-      "sha256": "fdbe663970204b535afc371be7cd2daccbb8d50fd6e456ef5b36ae5c7af56a92"
+      "bytes": 255413,
+      "sha256": "68b634d6b311232b3455555f5151cfc4a62798b996cfbece737300550cdfc4b1"
     },
     {
       "path": "talk/pose_thumbs.png",
-      "bytes": 11135,
-      "sha256": "91ba8c56b5c65192ed1ded5d04666e1b4480fc5d08491c8e9d886720e5bfc9b6"
+      "bytes": 283222,
+      "sha256": "5b9d2317193078154c95428cc2ccfe658b10abb2daffd372f5db55901d2f8ce4"
     },
     {
       "path": "talk/pose_wave.png",
-      "bytes": 11648,
-      "sha256": "702843982e96e8896ef89490c1fd6b2e1820e2e8488ca6f6eebfef3ed2efdd41"
+      "bytes": 315801,
+      "sha256": "5c0a4d1106a3be64fa97d411a236cc6a425900aa69377bff0383085ae9d56659"
     }
   ]
 }
