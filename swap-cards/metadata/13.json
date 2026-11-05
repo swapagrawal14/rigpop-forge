@@ -1,0 +1,29 @@
+{
+  "name": "SWAP #13 \u2014 Sakura Breeze",
+  "description": "SWAP #13 Sakura Breeze from Swapnil Agrawal's Rigpop Collection \u2014 a 15-card hand-made trading card series. Rarity: RARE. CALM: 86/100.",
+  "image": "https://cdn.jsdelivr.net/gh/swapagrawal14/rigpop-forge@main/swap-cards/images/swap-card-13.png",
+  "external_url": "https://swapnilagrawal.my.id",
+  "attributes": [
+    {
+      "trait_type": "Rarity",
+      "value": "RARE"
+    },
+    {
+      "trait_type": "Card",
+      "value": "13/15"
+    },
+    {
+      "trait_type": "Calm",
+      "value": 86,
+      "display_type": "number"
+    },
+    {
+      "trait_type": "Collection",
+      "value": "Rigpop Collection"
+    },
+    {
+      "trait_type": "Artist",
+      "value": "Swapnil Agrawal"
+    }
+  ]
+}

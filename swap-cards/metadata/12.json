@@ -1,0 +1,29 @@
+{
+  "name": "SWAP #12 \u2014 BDS Grad",
+  "description": "SWAP #12 BDS Grad from Swapnil Agrawal's Rigpop Collection \u2014 a 15-card hand-made trading card series. Rarity: RARE. WISDOM: 91/100.",
+  "image": "https://cdn.jsdelivr.net/gh/swapagrawal14/rigpop-forge@main/swap-cards/images/swap-card-12.png",
+  "external_url": "https://swapnilagrawal.my.id",
+  "attributes": [
+    {
+      "trait_type": "Rarity",
+      "value": "RARE"
+    },
+    {
+      "trait_type": "Card",
+      "value": "12/15"
+    },
+    {
+      "trait_type": "Wisdom",
+      "value": 91,
+      "display_type": "number"
+    },
+    {
+      "trait_type": "Collection",
+      "value": "Rigpop Collection"
+    },
+    {
+      "trait_type": "Artist",
+      "value": "Swapnil Agrawal"
+    }
+  ]
+}

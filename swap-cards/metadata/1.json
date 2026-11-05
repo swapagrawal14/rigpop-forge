@@ -1,0 +1,29 @@
+{
+  "name": "SWAP #01 \u2014 Anarkali Bloom",
+  "description": "SWAP #01 Anarkali Bloom from Swapnil Agrawal's Rigpop Collection \u2014 a 15-card hand-made trading card series. Rarity: COMMON. GRACE: 72/100.",
+  "image": "https://cdn.jsdelivr.net/gh/swapagrawal14/rigpop-forge@main/swap-cards/images/swap-card-01.png",
+  "external_url": "https://swapnilagrawal.my.id",
+  "attributes": [
+    {
+      "trait_type": "Rarity",
+      "value": "COMMON"
+    },
+    {
+      "trait_type": "Card",
+      "value": "1/15"
+    },
+    {
+      "trait_type": "Grace",
+      "value": 72,
+      "display_type": "number"
+    },
+    {
+      "trait_type": "Collection",
+      "value": "Rigpop Collection"
+    },
+    {
+      "trait_type": "Artist",
+      "value": "Swapnil Agrawal"
+    }
+  ]
+}

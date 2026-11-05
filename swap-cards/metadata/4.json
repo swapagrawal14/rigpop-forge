@@ -1,0 +1,29 @@
+{
+  "name": "SWAP #04 \u2014 Mewar Royale",
+  "description": "SWAP #04 Mewar Royale from Swapnil Agrawal's Rigpop Collection \u2014 a 15-card hand-made trading card series. Rarity: LEGENDARY. ROYALTY: 99/100.",
+  "image": "https://cdn.jsdelivr.net/gh/swapagrawal14/rigpop-forge@main/swap-cards/images/swap-card-04.png",
+  "external_url": "https://swapnilagrawal.my.id",
+  "attributes": [
+    {
+      "trait_type": "Rarity",
+      "value": "LEGENDARY"
+    },
+    {
+      "trait_type": "Card",
+      "value": "4/15"
+    },
+    {
+      "trait_type": "Royalty",
+      "value": 99,
+      "display_type": "number"
+    },
+    {
+      "trait_type": "Collection",
+      "value": "Rigpop Collection"
+    },
+    {
+      "trait_type": "Artist",
+      "value": "Swapnil Agrawal"
+    }
+  ]
+}
